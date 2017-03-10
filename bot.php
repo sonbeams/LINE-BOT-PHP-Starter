@@ -31,29 +31,23 @@ if (!is_null($events['events'])) {
 				'template' => [
 					'type' => 'confirm',
 					'text' => 'Are you sure?',
-					'actions' => [[
+					'actions' => array(
+						[0] => array(
 						    'type' => 'message',
 						    'label' => 'Yes',
 						    'text' => 'yes'
-						],
-						[
+						)
+						[1] => array(
 						    'type' => 'message',
 						    'label' => 'No',
 						    'text' => 'no'
-						]
-					]
+						)
+					)
 					
 				]
 			];
 
-			/*$messages = [
-				'type' => 'location',
-    				'title' => 'my location',
-    				'address' => '〒150-0002 東京都渋谷区渋谷２丁目２１−１',
-    				'latitude' => 35.65910807942215,
-    				'longitude' => 139.70372892916203
-			];*/
-
+			
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
