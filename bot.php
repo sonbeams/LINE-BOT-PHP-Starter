@@ -21,7 +21,11 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => 'เลขบัญชีของท่านคือ'.$text //$text
 			];*/
-			$messages = [
+			$messages = {
+				"type": "text",
+				"text": "Account ID"
+			}
+			/*$messages = [
 				'type' => 'template',
 				'altText' => 'this is a confirm template';
 				'template' => [
@@ -39,7 +43,7 @@ if (!is_null($events['events'])) {
 						]
 					]
 				]
-			];
+			];*/
 
 			/*$messages = [
 				'type' => 'location',
