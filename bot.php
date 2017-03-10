@@ -37,9 +37,10 @@ if (!is_null($events['events'])) {
 						    'label' => 'No',
 						    'text' => 'no'
 						]
-					];
-				];
+					]
+				]
 			];
+
 			/*$messages = [
 				'type' => 'location',
     				'title' => 'my location',
