@@ -33,12 +33,6 @@ if (!is_null($events['events'])) {
 						    "label" => "Yes",
 						    "text" => "yes"
 					)
-						//[1] => array(
-						//    'type' => 'message',
-						//    'label' => 'No',
-						//    'text' => 'no'
-						//)
-					
 					
 				)
 			];
