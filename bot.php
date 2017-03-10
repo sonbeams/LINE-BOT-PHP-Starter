@@ -29,16 +29,16 @@ if (!is_null($events['events'])) {
 					'type' => 'confirm',
 					'text' => 'Are you sure?',
 					'actions' => array(
-						[0] => array(
+						//[0] => array(
 						    'type' => 'message',
 						    'label' => 'Yes',
 						    'text' => 'yes'
-						),
-						[1] => array(
-						    'type' => 'message',
-						    'label' => 'No',
-						    'text' => 'no'
-						)
+						//),
+						//[1] => array(
+						//    'type' => 'message',
+						//    'label' => 'No',
+						//    'text' => 'no'
+						//)
 					)
 					
 				]
