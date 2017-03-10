@@ -29,9 +29,14 @@ if (!is_null($events['events'])) {
 					'type' => 'confirm',
 					'text' => 'Are you sure?',
 					'actions' => array(
-						    "type" => "message",
+						    array("type" => "message",
 						    "label" => "Yes",
 						    "text" => "yes"
+						    ),
+						    array("type" => "message",
+						    "label" => "No",
+						    "text" => "no"
+						    )
 					)
 					
 				]
