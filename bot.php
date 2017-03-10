@@ -41,7 +41,7 @@ if (!is_null($events['events'])) {
 					]
 				]
 			];*/
-			$message = [
+			$messages = [
 				'type' => 'location',
     				'title' => 'my location',
     				'address' => '〒150-0002 東京都渋谷区渋谷２丁目２１−１',
