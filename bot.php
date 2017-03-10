@@ -17,15 +17,15 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
-			$messages = [
+			/*$messages = [
 				'type' => 'text',
 				'text' => 'เลขบัญชีของท่านคือ'.$text //$text
 			];
-			/*$messages = {
+			$messages = {
 				"type": "text",
 				"text": "Account ID"
 			}*/
-			/*$messages = [
+			$messages = [
 				'type' => 'template',
 				'altText' => 'this is a confirm template';
 				'template' => [
@@ -40,10 +40,10 @@ if (!is_null($events['events'])) {
 						    'type' => 'message',
 						    'label' => 'No',
 						    'text' => 'no'
-						]
 					]
+					
 				]
-			];*/
+			];
 
 			/*$messages = [
 				'type' => 'location',
@@ -61,8 +61,6 @@ if (!is_null($events['events'])) {
 			];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
-			
-			echo "test";
 
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
