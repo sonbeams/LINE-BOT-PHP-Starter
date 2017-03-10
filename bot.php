@@ -25,48 +25,27 @@ if (!is_null($events['events'])) {
 				"type": "text",
 				"text": "Account ID"
 			}*/
-			/*$messages = [
+			$messages = [
 				'type' => 'template',
 				'altText' => 'this is a confirm template';
-				'template' => array(
-					"type" => "confirm",
-					"text" => "Are you sure?",
-					"actions" => array(
-						[0] => array(
-						    "type" => "message",
-						    "label" => "Yes",
-						    "text" => "yes"
+				'template' => [
+					'type' => 'confirm',
+					'text' => 'Are you sure?',
+					'actions' => array(
+						0 => array(
+						    'type' => 'message',
+						    'label' => 'Yes',
+						    'text' => 'yes'
 						),
-						[1] => array(
-						    "type" => "message",
-						    "label" => "No",
-						    "text" => "no"
+						1 => array(
+						    'type' => 'message',
+						    'label' => 'No',
+						    'text' => 'no'
 						)
 					)
 					
-				)
-			];*/
-			
-			$messages = '{
-  "type": "template",
-  "altText": "this is a confirm template",
-  "template": {
-      "type": "confirm",
-      "text": "Are you sure?",
-      "actions": [
-          {
-            "type": "message",
-            "label": "Yes",
-            "text": "yes"
-          },
-          {
-            "type": "message",
-            "label": "No",
-            "text": "no"
-          }
-      ]
-  }
-}';
+				]
+			];
 
 			
 			// Make a POST Request to Messaging API to reply to sender
