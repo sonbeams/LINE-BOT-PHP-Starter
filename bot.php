@@ -17,12 +17,12 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
-			$messages = [
+			/*$messages = [
 				'type' => 'text',
 				'text' => 'เลขบัญชีของท่านคือ'.$text //$text
-			];
+			];*/
 			
-			/*$messages = [
+			$messages = [
 				'type' => 'template',
 				'altText' => 'this is a confirm template';
 				'template' => [
@@ -42,7 +42,7 @@ if (!is_null($events['events'])) {
 					)
 					
 				]
-			];*/
+			];
 
 			
 			// Make a POST Request to Messaging API to reply to sender
