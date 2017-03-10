@@ -20,11 +20,8 @@ if (!is_null($events['events'])) {
 			/*$messages = [
 				'type' => 'text',
 				'text' => 'เลขบัญชีของท่านคือ'.$text //$text
-			];
-			$messages = {
-				"type": "text",
-				"text": "Account ID"
-			}*/
+			];*/
+			
 			$messages = [
 				'type' => 'template',
 				'altText' => 'this is a confirm template';
@@ -32,12 +29,12 @@ if (!is_null($events['events'])) {
 					'type' => 'confirm',
 					'text' => 'Are you sure?',
 					'actions' => array(
-						0 => array(
+						array(
 						    'type' => 'message',
 						    'label' => 'Yes',
 						    'text' => 'yes'
 						),
-						1 => array(
+						array(
 						    'type' => 'message',
 						    'label' => 'No',
 						    'text' => 'no'
