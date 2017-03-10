@@ -26,12 +26,12 @@ if (!is_null($events['events'])) {
 				'type' => 'template',
 				'altText' => 'this is a confirm template';
 				'template' => array(
-					'type' => 'confirm',
-					'text' => 'Are you sure?',
-					'actions' => array(
-						    'type' => 'message',
-						    'label' => 'Yes',
-						    'text' => 'yes'
+					"type" => "confirm",
+					"text" => "Are you sure?",
+					"actions" => array(
+						    "type" => "message",
+						    "label" => "Yes",
+						    "text" => "yes"
 					)
 						//[1] => array(
 						//    'type' => 'message',
