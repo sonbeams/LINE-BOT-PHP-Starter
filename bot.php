@@ -25,8 +25,8 @@ if (!is_null($events['events'])) {
 			$messages = [
 				'type' => 'template',
 				'altText' => 'this is a confirm template',
-				'template' => array(
-					"type" => "confirm",
+				'template' => 'confirm'
+					/*"type" => "confirm",
 					"text" => "Are you sure?",
 					"actions" => array(
 						    "type" => "message",
@@ -34,7 +34,7 @@ if (!is_null($events['events'])) {
 						    "text" => "yes"
 					)
 					
-				)
+				)*/
 			];
 
 			
