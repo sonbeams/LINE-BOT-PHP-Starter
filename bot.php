@@ -17,14 +17,14 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
-			/*$messages = [
+			$messages = [
 				'type' => 'text',
 				'text' => 'เลขบัญชีของท่านคือ'.$text //$text
-			];*/
-			$messages = {
+			];
+			/*$messages = {
 				"type": "text",
 				"text": "Account ID"
-			}
+			}*/
 			/*$messages = [
 				'type' => 'template',
 				'altText' => 'this is a confirm template';
@@ -71,7 +71,7 @@ if (!is_null($events['events'])) {
 			$result = curl_exec($ch);
 			curl_close($ch);
 
-			echo $result . "\r\n";
+			echo $result.'Yeah' . "\r\n";
 		}
 	}
 }
