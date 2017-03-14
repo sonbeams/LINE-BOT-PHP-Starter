@@ -81,7 +81,7 @@ if (!is_null($events['events'])) {
 							),
 							array("type" => "uri",
 							"label" => "View detail",
-							"data" => "https://www.trinitythai.com"
+							"uri" => "https://www.trinitythai.com"
 							)
 						    )
 						),    
@@ -89,17 +89,13 @@ if (!is_null($events['events'])) {
 						"title" => "Technical Seminar",
 						"text" => "26th March 2017",
 						"actions" => array(
-							array("type" => "postback",
+							array("type" => "message",
 							"label" => "Register",
-							"data" => "action=register&itemid=002"
-							),
-							array("type" => "postback",
-							"label" => "Add to watch list",
-							"data" => "action=addwatch&itemid=002"
+							"text" => "Register for free"
 							),
 							array("type" => "uri",
 							"label" => "View detail",
-							"data" => "https://www.trinitythai.com"
+							"uri" => "https://www.trinitythai.com"
 							)
 						    )
 						)
