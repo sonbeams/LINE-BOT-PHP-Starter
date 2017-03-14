@@ -53,38 +53,16 @@ if (!is_null($events['events'])) {
 						"title" => "All about technical chart",
 						"text" => "Daily technical research",
 						"actions" => array(
-							array("type" => "postback",
-							"label" => "Add to cart",
-							"data" => "action=addcart&itemid=001"
-							),
-							array("type" => "postback",
+							array("type" => "message",
 							"label" => "Add to watch list",
-							"data" => "action=addwatch&itemid=001"
+							"text" => "Watch List"
 							),
 							array("type" => "uri",
 							"label" => "Read more",
-							"data" => "https://www.trinityquicktrade.com"
+							"uri" => "https://www.trinityquicktrade.com"
 							)
 						    )
-						),    
-						array("thumbnailImageUrl" => "https://www.img.in.th/images/83c706985113b2d9ed99dd3041d3db99.png",
-						"title" => "Technical Seminar",
-						"text" => "26th March 2017",
-						"actions" => array(
-							array("type" => "postback",
-							"label" => "Register",
-							"data" => "action=register&itemid=002"
-							),
-							array("type" => "postback",
-							"label" => "Add to watch list",
-							"data" => "action=addwatch&itemid=002"
-							),
-							array("type" => "uri",
-							"label" => "View detail",
-							"uri" => "https://www.trinitythai.com"
-							)
-						    )
-						),    
+						),
 						array("thumbnailImageUrl" => "https://www.img.in.th/images/86be082e281fba804d9c8b05b91b5c57.png",
 						"title" => "Technical Seminar",
 						"text" => "26th March 2017",
