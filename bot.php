@@ -54,7 +54,7 @@ if (!is_null($events['events'])) {
 						"text" => "Short term trading",
 						"actions" => array(
 							array("type" => "message",
-							"label" => "View portfolio",
+							"label" => "Portfolio",
 							"text" => "perfect gems"
 							),
 							array("type" => "uri",
@@ -68,12 +68,12 @@ if (!is_null($events['events'])) {
 						"text" => "Speculate Short term trading",
 						"actions" => array(
 							array("type" => "message",
-							"label" => "View portfolio",
+							"label" => "Portfolio",
 							"text" => "seafco"
 							),
 							array("type" => "uri",
-							"label" => "Go to trinity thai",
-							"uri" => "https://www.trinitythai.com"
+							"label" => "Call Trinity",
+							"uri" => "028019100"
 							)
 						    )
 						)
