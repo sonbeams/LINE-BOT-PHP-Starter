@@ -49,7 +49,7 @@ if (!is_null($events['events'])) {
 				'template' => [
 					'type' => 'carousel',
 					'columns' => array(
-						array("thumbnailImageUrl" => "https://www.img.in.th/images/d5fb5e8f825cf7504dcc54d945019b04.png",
+						array("thumbnailImageUrl" => "https://www.img.in.th/images/90e08230ea70df009df00502147814a8.png",
 						"title" => "All about technical chart",
 						"text" => "Daily technical research",
 						"actions" => array(
@@ -67,7 +67,7 @@ if (!is_null($events['events'])) {
 							)
 						    )
 						),    
-						array("thumbnailImageUrl" => "https://www.img.in.th/images/f594e2eaf3401c1c0a6d22043b5c2906.png",
+						array("thumbnailImageUrl" => "https://www.img.in.th/images/83c706985113b2d9ed99dd3041d3db99.png",
 						"title" => "Technical Seminar",
 						"text" => "26th March 2017",
 						"actions" => array(
@@ -85,7 +85,7 @@ if (!is_null($events['events'])) {
 							)
 						    )
 						),    
-						array("thumbnailImageUrl" => "https://www.img.in.th/images/f594e2eaf3401c1c0a6d22043b5c2906.png",
+						array("thumbnailImageUrl" => "https://www.img.in.th/images/86be082e281fba804d9c8b05b91b5c57.png",
 						"title" => "Technical Seminar",
 						"text" => "26th March 2017",
 						"actions" => array(
