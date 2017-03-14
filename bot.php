@@ -73,7 +73,7 @@ if (!is_null($events['events'])) {
 							),
 							array("type" => "uri",
 							"label" => "Call Trinity",
-							"uri" => "028019100"
+							"uri" => "https://www.trinitythai.com"
 							)
 						    )
 						)
