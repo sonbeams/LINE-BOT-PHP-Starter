@@ -50,29 +50,29 @@ if (!is_null($events['events'])) {
 					'type' => 'carousel',
 					'columns' => array(
 						array("thumbnailImageUrl" => "https://www.img.in.th/images/90e08230ea70df009df00502147814a8.png",
-						"title" => "All about technical chart",
-						"text" => "Daily technical research",
+						"title" => "Quant Trading",
+						"text" => "Short term trading",
 						"actions" => array(
 							array("type" => "message",
-							"label" => "Add to watch list",
-							"text" => "Watch List"
+							"label" => "View portfolio",
+							"text" => "perfect gems"
 							),
 							array("type" => "uri",
-							"label" => "Read more",
+							"label" => "Go to trinityquicktrade",
 							"uri" => "https://www.trinityquicktrade.com"
 							)
 						    )
 						),
 						array("thumbnailImageUrl" => "https://www.img.in.th/images/86be082e281fba804d9c8b05b91b5c57.png",
-						"title" => "Technical Seminar",
-						"text" => "26th March 2017",
+						"title" => "Trinity Trigger",
+						"text" => "Speculate Short term trading",
 						"actions" => array(
 							array("type" => "message",
-							"label" => "Register",
-							"text" => "Register for free"
+							"label" => "View portfolio",
+							"text" => "seafco"
 							),
 							array("type" => "uri",
-							"label" => "View detail",
+							"label" => "Go to trinity thai",
 							"uri" => "https://www.trinitythai.com"
 							)
 						    )
