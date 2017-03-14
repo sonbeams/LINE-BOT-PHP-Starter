@@ -60,7 +60,8 @@ if (!is_null($events['events'])) {
 							"label" => "Add to watch list",
 							"data" => "action=addwatch&itemid=001"
 							)
-						),
+						)
+					),    
 						array("thumbnailImageUrl" => "https://www.img.in.th/images/f594e2eaf3401c1c0a6d22043b5c2906.png",
 						"title" => "Technical Seminar",
 						"text" => "26th March 2017",
