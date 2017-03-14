@@ -55,7 +55,7 @@ if (!is_null($events['events'])) {
 						"actions" => array(
 							array("type" => "message",
 							"label" => "Portfolio",
-							"text" => "perfect gems"
+							"text" => "view port"
 							),
 							array("type" => "uri",
 							"label" => "Go to trinityquicktrade",
@@ -69,7 +69,7 @@ if (!is_null($events['events'])) {
 						"actions" => array(
 							array("type" => "message",
 							"label" => "Portfolio",
-							"text" => "seafco"
+							"text" => "portfolio"
 							),
 							array("type" => "uri",
 							"label" => "Call Trinity",
