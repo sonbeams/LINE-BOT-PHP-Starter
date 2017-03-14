@@ -1,6 +1,5 @@
 <?php
 $access_token = 'IIckEKH4AEo7xgc74LJmTYBxU39gbny9jEwIbmroCsSTMFmg8RpQ1QPgVIm7kqrR4yO/0g0l/JvCX30uMq+WdFhjDXNuvZfo96+IrLgSZxJ2m2spr+eTIVo17dniDcIknwVf5BvWSFAs0yV3MuGY/gdB04t89/1O/w1cDnyilFU=';
-
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
@@ -15,7 +14,6 @@ if (!is_null($events['events'])) {
 			$text = $event['message']['text'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
-
 			//Build message to reply back
 			/*$messages = [
 				'type' => 'text',
@@ -50,29 +48,29 @@ if (!is_null($events['events'])) {
 					'type' => 'carousel',
 					'columns' => array(
 						array("thumbnailImageUrl" => "https://www.img.in.th/images/90e08230ea70df009df00502147814a8.png",
-						"title" => "Quant Trading",
-						"text" => "Short term trading",
+						"title" => "All about technical chart",
+						"text" => "Daily technical research",
 						"actions" => array(
 							array("type" => "message",
-							"label" => "Portfolio",
-							"text" => "view port"
+							"label" => "Add to watch list",
+							"text" => "Watch List"
 							),
 							array("type" => "uri",
-							"label" => "Go to trinityquicktrade",
+							"label" => "Read more",
 							"uri" => "https://www.trinityquicktrade.com"
 							)
 						    )
 						),
 						array("thumbnailImageUrl" => "https://www.img.in.th/images/86be082e281fba804d9c8b05b91b5c57.png",
-						"title" => "Trinity Trigger",
-						"text" => "Short term trading",
+						"title" => "Technical Seminar",
+						"text" => "26th March 2017",
 						"actions" => array(
 							array("type" => "message",
-							"label" => "Portfolio",
-							"text" => "portfolio"
+							"label" => "Register",
+							"text" => "Register for free"
 							),
 							array("type" => "uri",
-							"label" => "Call Trinity",
+							"label" => "View detail",
 							"uri" => "https://www.trinitythai.com"
 							)
 						    )
@@ -96,7 +94,6 @@ if (!is_null($events['events'])) {
 			];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
-
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -105,7 +102,6 @@ if (!is_null($events['events'])) {
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 			$result = curl_exec($ch);
 			curl_close($ch);
-
 			echo $result . "\r\n";
 		}
 	}
