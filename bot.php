@@ -41,7 +41,7 @@ if (!is_null($events['events'])) {
 					
 				]
 			];*/
-			
+		try {
 			$messages = [
 				'type' => 'template',
 				'altText' => 'TRINITY Update',
@@ -87,6 +87,12 @@ if (!is_null($events['events'])) {
 					)
 				]
 			];
+		} catch (exception $e) {
+			$messages = [
+				'type' => 'text',
+				'text' => 'Caught exception: '.  $e->getMessage(). "\n"
+			];
+		}
 			
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
