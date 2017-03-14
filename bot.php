@@ -65,7 +65,7 @@ if (!is_null($events['events'])) {
 						),
 						array("thumbnailImageUrl" => "https://www.img.in.th/images/86be082e281fba804d9c8b05b91b5c57.png",
 						"title" => "Trinity Trigger",
-						"text" => "Speculate Short term trading",
+						"text" => "Short term trading",
 						"actions" => array(
 							array("type" => "message",
 							"label" => "Portfolio",
