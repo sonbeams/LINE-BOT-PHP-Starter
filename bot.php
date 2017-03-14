@@ -84,6 +84,24 @@ if (!is_null($events['events'])) {
 							"data" => "https://www.trinitythai.com"
 							)
 						    )
+						),    
+						array("thumbnailImageUrl" => "https://www.img.in.th/images/f594e2eaf3401c1c0a6d22043b5c2906.png",
+						"title" => "Technical Seminar",
+						"text" => "26th March 2017",
+						"actions" => array(
+							array("type" => "postback",
+							"label" => "Register",
+							"data" => "action=register&itemid=002"
+							),
+							array("type" => "postback",
+							"label" => "Add to watch list",
+							"data" => "action=addwatch&itemid=002"
+							),
+							array("type" => "uri",
+							"label" => "View detail",
+							"data" => "https://www.trinitythai.com"
+							)
+						    )
 						)
 					)
 				]
