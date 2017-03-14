@@ -65,6 +65,7 @@ if (!is_null($events['events'])) {
 							"label" => "Read more",
 							"data" => "https://www.trinityquicktrade.com"
 							)
+						    )
 						),    
 						array("thumbnailImageUrl" => "https://www.img.in.th/images/f594e2eaf3401c1c0a6d22043b5c2906.png",
 						"title" => "Technical Seminar",
@@ -82,6 +83,7 @@ if (!is_null($events['events'])) {
 							"label" => "View detail",
 							"data" => "https://www.trinitythai.com"
 							)
+						    )
 						)
 					)
 				]
