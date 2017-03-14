@@ -22,7 +22,27 @@ if (!is_null($events['events'])) {
 				'text' => 'เลขบัญชีของท่านคือ'.$text //$text
 			];*/
 			
-			/*
+			/*$messages = [
+				'type' => 'template',
+				'altText' => 'this is a confirm template',
+				'template' => [
+					'type' => 'confirm',
+					'text' => 'Are you sure?',
+					'actions' => array(
+						    array("type" => "message",
+						    "label" => "Yes",
+						    "text" => "yes"
+						    ),
+						    array("type" => "message",
+						    "label" => "No",
+						    "text" => "no"
+						    )
+					)
+					
+				]
+			];
+			*/
+		try {
 			$messages = [
 				'type' => 'template',
 				'altText' => 'TRINITY Update',
@@ -45,8 +65,7 @@ if (!is_null($events['events'])) {
 							"label" => "Read more",
 							"data" => "https://www.trinityquicktrade.com"
 							)
-						     )
-					    	),    
+						),    
 						array("thumbnailImageUrl" => "https://www.img.in.th/images/f594e2eaf3401c1c0a6d22043b5c2906.png",
 						"title" => "Technical Seminar",
 						"text" => "26th March 2017",
@@ -63,31 +82,11 @@ if (!is_null($events['events'])) {
 							"label" => "View detail",
 							"data" => "https://www.trinitythai.com"
 							)
-						    )
-					   	)
+						)
 					)
-				]
-			];*/
-		try {
-			$messages = [
-				'type' => 'template',
-				'altText' => 'this is a confirm template',
-				'template' => [
-					'type' => 'confirm',
-					'text' => 'Are you sure?',
-					'actions' => array(
-						    array("type" => "message",
-						    "label" => "Yes",
-						    "text" => "yes"
-						    ),
-						    array("type" => "message",
-						    "label" => "No",
-						    "text" => "no"
-						    )
-					)
-					
 				]
 			];
+			
 		} catch (Exception $e) {
 			$messages = [
 				'type' => 'text',
