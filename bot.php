@@ -41,7 +41,43 @@ if (!is_null($events['events'])) {
 					
 				]
 			];
-
+			
+			$messages = [
+				'type' => 'template',
+				'altText' => 'TRINITY Update',
+				'template' => [
+					'type' => 'carousel',
+					'columns' => array(
+						array("thumbnailImageUrl" => "https://www.img.in.th/images/d5fb5e8f825cf7504dcc54d945019b04.png",
+						"title" => "All about technical chart",
+						"text" => "Daily technical research",
+						"actions" => array(
+							array("type" => "uri",
+							"label" => "Read more",
+							"data" => "https://www.trinityquicktrade.com"
+							),
+							array("type" => "postback",
+							"label" => "Add to watch list",
+							"data" => "action=addwatch&itemid=001"
+							)
+						)
+					),
+						array("thumbnailImageUrl" => "https://www.img.in.th/images/f594e2eaf3401c1c0a6d22043b5c2906.png",
+						"title" => "Technical Seminar",
+						"text" => "26th March 2017",
+						"actions" => array(
+							array("type" => "uri",
+							"label" => "Register",
+							"data" => "https://www.trinitythai.com"
+							),
+							array("type" => "postback",
+							"label" => "Read more",
+							"data" => "action=read&itemid=002"
+							)
+						)
+					)
+				]
+			];
 			
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
