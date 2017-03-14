@@ -22,7 +22,7 @@ if (!is_null($events['events'])) {
 				'text' => 'เลขบัญชีของท่านคือ'.$text //$text
 			];*/
 			
-			$messages = [
+			/*$messages = [
 				'type' => 'template',
 				'altText' => 'this is a confirm template',
 				'template' => [
@@ -40,9 +40,9 @@ if (!is_null($events['events'])) {
 					)
 					
 				]
-			];
+			];*/
 			
-			/*$messages = [
+			$messages = [
 				'type' => 'template',
 				'altText' => 'TRINITY Update',
 				'template' => [
@@ -61,7 +61,7 @@ if (!is_null($events['events'])) {
 							"data" => "action=addwatch&itemid=001"
 							)
 						)
-					),    
+					    ),    
 						array("thumbnailImageUrl" => "https://www.img.in.th/images/f594e2eaf3401c1c0a6d22043b5c2906.png",
 						"title" => "Technical Seminar",
 						"text" => "26th March 2017",
@@ -75,9 +75,10 @@ if (!is_null($events['events'])) {
 							"data" => "action=read&itemid=002"
 							)
 						)
+					    )
 					)
 				]
-			];*/
+			];
 			
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
