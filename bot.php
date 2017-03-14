@@ -22,26 +22,7 @@ if (!is_null($events['events'])) {
 				'text' => 'เลขบัญชีของท่านคือ'.$text //$text
 			];*/
 			
-			/*$messages = [
-				'type' => 'template',
-				'altText' => 'this is a confirm template',
-				'template' => [
-					'type' => 'confirm',
-					'text' => 'Are you sure?',
-					'actions' => array(
-						    array("type" => "message",
-						    "label" => "Yes",
-						    "text" => "yes"
-						    ),
-						    array("type" => "message",
-						    "label" => "No",
-						    "text" => "no"
-						    )
-					)
-					
-				]
-			];*/
-		try {
+			/*
 			$messages = [
 				'type' => 'template',
 				'altText' => 'TRINITY Update',
@@ -86,11 +67,31 @@ if (!is_null($events['events'])) {
 					   	)
 					)
 				]
+			];*/
+		try {
+			$messages = [
+				'type' => 'template',
+				'altText' => 'this is a confirm template',
+				'template' => [
+					'type' => 'confirm',
+					'text' => 'Are you sure?',
+					'actions' => array(
+						    array("type" => "message",
+						    "label" => "Yes",
+						    "text" => "yes"
+						    ),
+						    array("type" => "message",
+						    "label" => "No",
+						    "text" => "no"
+						    )
+					)
+					
+				]
 			];
-		} catch (exception $e) {
+		} catch (Exception $e) {
 			$messages = [
 				'type' => 'text',
-				'text' => 'Caught exception: '.  $e->getMessage(). "\n"
+				'text' => 'Caught exception: '.  $e->getMessage()
 			];
 		}
 			
