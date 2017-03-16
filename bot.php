@@ -64,14 +64,14 @@ if (!is_null($events['events'])) {
 			if ($text == 'imgtest') {
 				$messages = [
 					'type' => 'imagemap',
-					'baseUrl' => 'https://www.img.in.th/images/18c25e35d2b0c2fb9066f550f20deb06.png',
+					'baseUrl' => 'https://www.img.in.th/images/18c25e35d2b0c2fb9066f550f20deb06.png/1040',
 					'altText' => 'This is an imagemap',
 					'baseSize' => array(
 						"height" => 1040,
 						"width" => 1040
 					),
 					'actions' => array(
-						/*array(
+						array(
 						    "type" => "uri",
 						    "linkUri" => "https://www.trinityquicktrade.com",
 						    "area" => array(
@@ -80,7 +80,7 @@ if (!is_null($events['events'])) {
 							    "width" => 520,
 							    "height" => 1040
 							)
-						),*/
+						),
 						array(
 						    "type" => "message",
 						    "text" => "hello",
