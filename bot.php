@@ -73,7 +73,7 @@ if (!is_null($events['events'])) {
 					'actions' => array(
 						array(
 						    "type" => "uri",
-						    "linkUri" => "https://www.img.in.th/images/90e08230ea70df009df00502147814a.png/529",
+						    "linkUri" => "https://www.img.in.th/images/90e08230ea70df009df00502147814a.png/460",
 						    "area" => array(
 							    "x" => 0,
 							    "y" => 0,
