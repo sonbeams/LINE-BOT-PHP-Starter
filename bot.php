@@ -71,7 +71,7 @@ if (!is_null($events['events'])) {
 						"width" => 1040
 					),
 					'actions' => array(
-						array(
+						/*array(
 						    "type" => "uri",
 						    "linkUri" => "https://www.trinityquicktrade.com",
 						    "area" => array(
@@ -80,7 +80,7 @@ if (!is_null($events['events'])) {
 							    "width" => 520,
 							    "height" => 1040
 							)
-						),
+						),*/
 						array(
 						    "type" => "message",
 						    "text" => "hello",
