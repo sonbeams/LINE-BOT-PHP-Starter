@@ -64,7 +64,7 @@ if (!is_null($events['events'])) {
 			if ($text == 'imgtest') {
 				$messages = [
 					'type' => 'imagemap',
-					'baseUrl' => 'https://www.img.in.th/images/18c25e35d2b0c2fb9066f550f20deb06',
+					'baseUrl' => 'https://www.img.in.th/images/18c25e35d2b0c2fb9066f550f20deb06.png',
 					'altText' => 'This is an imagemap',
 					'baseSize' => array(
 						"height" => 1040,
