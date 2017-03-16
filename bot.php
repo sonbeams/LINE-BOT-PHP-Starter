@@ -64,7 +64,7 @@ if (!is_null($events['events'])) {
 			if ($text == 'imgtest') {
 				$messages = [
 					'type' => 'imagemap',
-					'baseUrl' => 'https://www.img.in.th/images/18c25e35d2b0c2fb9066f550f20deb06.png',
+					'baseUrl' => 'https://www.img.in.th/images/18c25e35d2b0c2fb9066f550f20deb06',
 					'altText' => 'This is an imagemap',
 					'baseSize' => array(
 						"height" => 326,
@@ -73,7 +73,7 @@ if (!is_null($events['events'])) {
 					'actions' => array(
 						array(
 						    "type" => "uri",
-						    "linkUri" => "https://www.img.in.th/images/18c25e35d2b0c2fb9066f550f20deb06.png/700",
+						    "linkUri" => "https://www.img.in.th/images/18c25e35d2b0c2fb9066f550f20deb06/700",
 						    "area" => array(
 							    "x" => 0,
 							    "y" => 0,
