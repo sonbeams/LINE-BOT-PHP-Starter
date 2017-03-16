@@ -20,65 +20,80 @@ if (!is_null($events['events'])) {
 				'text' => 'เลขบัญชีของท่านคือ'.$text //$text
 			];*/
 			
-			/*$messages = [
-				'type' => 'template',
-				'altText' => 'this is a confirm template',
-				'template' => [
-					'type' => 'confirm',
-					'text' => 'Are you sure?',
-					'actions' => array(
-						    array("type" => "message",
-						    "label" => "Yes",
-						    "text" => "yes"
-						    ),
-						    array("type" => "message",
-						    "label" => "No",
-						    "text" => "no"
-						    )
-					)
-					
-				]
-			];
-			*/
 		try {
-			$messages = [
-				'type' => 'template',
-				'altText' => 'TRINITY Update',
-				'template' => [
-					'type' => 'carousel',
-					'columns' => array(
-						array("thumbnailImageUrl" => "https://www.img.in.th/images/90e08230ea70df009df00502147814a8.png",
-						"title" => "Quant Trading",
-						"text" => "Short term trading",
-						"actions" => array(
-							array("type" => "message",
-							"label" => "View portfolio",
-							"text" => "perfect gems"
+			if ($text == 'test') {
+				$messages = [
+					'type' => 'template',
+					'altText' => 'TRINITY Update',
+					'template' => [
+						'type' => 'carousel',
+						'columns' => array(
+							array("thumbnailImageUrl" => "https://www.img.in.th/images/90e08230ea70df009df00502147814a8.png",
+							"title" => "Quant Trading",
+							"text" => "Short term trading",
+							"actions" => array(
+								array("type" => "message",
+								"label" => "View portfolio",
+								"text" => "perfect gems"
+								),
+								array("type" => "uri",
+								"label" => "Read more",
+								"uri" => "https://www.trinityquicktrade.com"
+								)
+							    )
 							),
-							array("type" => "uri",
-							"label" => "Read more",
-							"uri" => "https://www.trinityquicktrade.com"
+							array("thumbnailImageUrl" => "https://www.img.in.th/images/86be082e281fba804d9c8b05b91b5c57.png",
+							"title" => "Trinity Trigger",
+							"text" => "Short term trading",
+							"actions" => array(
+								array("type" => "message",
+								"label" => "View Portfolio",
+								"text" => "seafco"
+								),
+								array("type" => "uri",
+								"label" => "View detail",
+								"uri" => "https://www.trinitythai.com"
+								)
+							    )
 							)
-						    )
-						),
-						array("thumbnailImageUrl" => "https://www.img.in.th/images/86be082e281fba804d9c8b05b91b5c57.png",
-						"title" => "Trinity Trigger",
-						"text" => "Short term trading",
-						"actions" => array(
-							array("type" => "message",
-							"label" => "View Portfolio",
-							"text" => "seafco"
-							),
-							array("type" => "uri",
-							"label" => "View detail",
-							"uri" => "https://www.trinitythai.com"
-							)
-						    )
 						)
-					)
-				]
-			];
+					]
+				];
+			}
 			
+			if ($text == 'imgtest') {
+				$messages = [
+					'type' => 'imagemap',
+					'baseUrl' => 'https://www.img.in.th/images/90e08230ea70df009df00502147814a8.png',
+					'altText' => 'This is an imagemap',
+					'baseSize' => array(
+						"height" => 326,
+						"width" => 529
+					),
+					'actions' => array(
+						array(
+						    "type" => "uri",
+						    "linkUri" => "ttps://www.img.in.th/images/",
+						    "area" => array(
+							    "x" => 0,
+							    "y" => 0,
+							    "width" => 520,
+							    "height" => 320
+							)
+						),
+						array(
+						    "type" => "message",
+						    "text" => "hello",
+						    "area" => array(
+							    "x" => 500,
+							    "y" => 0,
+							    "width" => 520,
+							    "height" => 320
+						     )
+						)
+					)		
+				];
+			}
 		} catch (Exception $e) {
 			$messages = [
 				'type' => 'text',
