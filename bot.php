@@ -64,11 +64,11 @@ if (!is_null($events['events'])) {
 			if ($text == 'imgtest') {
 				$messages = [
 					'type' => 'imagemap',
-					'baseUrl' => 'https://www.img.in.th/images/18c25e35d2b0c2fb9066f550f20deb06.png/1040',
+					'baseUrl' => 'http://oi64.tinypic.com/2woiohe.jpg/1040',
 					'altText' => 'This is an imagemap',
 					'baseSize' => array(
-						"height" => "1040",
-						"width" => "1040"
+						"height" => 1040,
+						"width" => 1040
 					),
 					'actions' => array(
 						/*array(
@@ -85,10 +85,10 @@ if (!is_null($events['events'])) {
 						    "type" => "message",
 						    "text" => "hello",
 						    "area" => array(
-							    "x" => "520",
-							    "y" => "0",
-							    "width" => "520",
-							    "height" => "1040"
+							    "x" => 520,
+							    "y" => 0,
+							    "width" => 520,
+							    "height" => 1040
 						     )
 						)
 					)		
