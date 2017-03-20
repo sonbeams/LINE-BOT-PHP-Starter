@@ -72,7 +72,7 @@ if (!is_null($events['events'])) {
 									array(
 									    "type" => "uri",
 									    "label" => "Yes",
-									    "uri" => "https://www.trinityquickatrade.com/"
+									    "uri" => "https://www.trinityquicktrade.com/Quicktrade/jsp/02_streaming.jsp"
 									),
 									array(
 									    "type" => "message",
