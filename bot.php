@@ -62,7 +62,7 @@ if (!is_null($events['events'])) {
 			}
 			
 			if ($text == 'yntest') {
-				$messasges = [
+				$messages = [
 					'type' => 'template',
 					'altText' => 'This is a confirm template',
 					'template' => array(
