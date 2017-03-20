@@ -61,6 +61,29 @@ if (!is_null($events['events'])) {
 				];
 			}
 			
+			if ($text == 'yntest') {
+				$messasges = [
+					'type' => 'template',
+					'altText' => 'This is a confirm template',
+					'template' => array(
+							"type" => "confirm",
+							"text" => "ต้องการตั้ง ซื้อ/ขาย",
+							"actions" => array(
+									array(
+									    "type" => "uri",
+									    "label" => "Yes",
+									    "uri" => "https://www.trinityquickatrade.com/"
+									),
+									array(
+									    "type" => "message",
+									    "label" => "No",
+									    "text" => "Cancel"
+									)
+								)
+						)
+				];
+			}
+			
 			if ($text == 'imgtest') {
 				$messages = [
 					'type' => 'imagemap',
