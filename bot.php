@@ -64,7 +64,7 @@ if (!is_null($events['events'])) {
 			if ($text == 'imgtest') {
 				$messages = [
 					'type' => 'imagemap',
-					'baseUrl' => 'http://oi64.tinypic.com/2woiohe.jpg/1040',
+					'baseUrl' => 'http://oi64.tinypic.com/2woiohe/1040',
 					'altText' => 'This is an imagemap',
 					'baseSize' => array(
 						"height" => 1040,
