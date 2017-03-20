@@ -139,6 +139,30 @@ if (!is_null($events['events'])) {
 						)
 				];
 			}
+			
+			if ($text == 'wdr 200000') {
+				$messages = [
+					'type' => 'template',
+					'altText' => 'This is a confirm template',
+					'template' => array(
+							"type" => "confirm",
+							"text" => "ต้องการถอนหลักประกัน บัญชี 99-12345-4 จำนวน 200,000 บาท ",
+							"actions" => array(
+									array(
+									    "type" => "message",
+									    "label" => "Confirm",
+									    "text" => "ดำเนินการถอนหลักประกัน จากบัญชี 99-12345-4 จำนวน 100,000 บาท\n ไปยัง บัญชี ATS เสร็จสิ้น"
+									),
+									array(
+									    "type" => "message",
+									    "label" => "No",
+									    "text" => "ยกเลิการฝากถอนประกัน"
+									)
+								)
+						)
+				];
+			}
+			
 		} catch (Exception $e) {
 			$messages = [
 				'type' => 'text',
