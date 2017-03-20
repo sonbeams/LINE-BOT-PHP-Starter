@@ -133,7 +133,7 @@ if (!is_null($events['events'])) {
 									array(
 									    "type" => "message",
 									    "label" => "No",
-									    "text" => "ยกเลิการฝากหลักประกัน"
+									    "text" => "ยกเลิกการฝากหลักประกัน"
 									)
 								)
 						)
@@ -156,7 +156,7 @@ if (!is_null($events['events'])) {
 									array(
 									    "type" => "message",
 									    "label" => "No",
-									    "text" => "ยกเลิการฝากถอนประกัน"
+									    "text" => "ยกเลิกการถอนประกัน"
 									)
 								)
 						)
