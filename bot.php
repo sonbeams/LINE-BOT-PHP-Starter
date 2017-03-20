@@ -61,7 +61,7 @@ if (!is_null($events['events'])) {
 				];
 			}
 			
-			if ($text == 'yntest') {
+			elseif ($text == 'yntest') {
 				$messages = [
 					'type' => 'template',
 					'altText' => 'This is a confirm template',
@@ -84,7 +84,7 @@ if (!is_null($events['events'])) {
 				];
 			}
 			
-			if ($text == 'imgtest') {
+			elseif ($text == 'imgtest') {
 				$messages = [
 					'type' => 'imagemap',
 					'baseUrl' => 'https://www.img.in.th/images/18c25e35d2b0c2fb9066f550f20deb06/1040',
@@ -117,52 +117,54 @@ if (!is_null($events['events'])) {
 					)		
 				];
 			}
-			if ($text == 'dep 100000') {
-				$messages = [
-					'type' => 'template',
-					'altText' => 'This is a confirm template',
-					'template' => array(
-							"type" => "confirm",
-							"text" => "ต้องการฝากหลักประกัน บัญชี 99-12345-4 จำนวน 100,000 บาท ",
-							"actions" => array(
-									array(
-									    "type" => "message",
-									    "label" => "Confirm",
-									    "text" => "ดำเนินการฝากหลักประกัน \nเข้าบัญชี 99-12345-4 \nจำนวน 100,000 บาท \nเสร็จสิ้น"
-									),
-									array(
-									    "type" => "message",
-									    "label" => "No",
-									    "text" => "ยกเลิกการฝากหลักประกัน"
+			else {
+				$command = explode(" ",$text);
+				
+				if ($command[0] == 'dep') {
+					$messages = [
+						'type' => 'template',
+						'altText' => 'This is a confirm template',
+						'template' => array(
+								"type" => "confirm",
+								"text" => "ต้องการฝากหลักประกัน บัญชี 99-12345-4 จำนวน ".$command[1]." บาท ",
+								"actions" => array(
+										array(
+										    "type" => "message",
+										    "label" => "Confirm",
+										    "text" => "ดำเนินการฝากหลักประกัน \nเข้าบัญชี 99-12345-4 \nจำนวน ".$command[1]." บาท \nเสร็จสิ้น"
+										),
+										array(
+										    "type" => "message",
+										    "label" => "No",
+										    "text" => "ยกเลิกการฝากหลักประกัน"
+										)
 									)
 								)
-						)
-				];
-			}
+					];
+				}
 			
-			if ($text == 'wdr 200000') {
-				$messages = [
-					'type' => 'template',
-					'altText' => 'This is a confirm template',
-					'template' => array(
-							"type" => "confirm",
-							"text" => "ต้องการถอนหลักประกัน บัญชี 99-12345-4 จำนวน 200,000 บาท ",
-							"actions" => array(
-									array(
-									    "type" => "message",
-									    "label" => "Confirm",
-									    "text" => "ดำเนินการถอนหลักประกัน \nจากบัญชี 99-12345-4 \nจำนวน 100,000 บาท \nไปยัง บัญชี ATS เสร็จสิ้น"
-									),
-									array(
-									    "type" => "message",
-									    "label" => "No",
-									    "text" => "ยกเลิกการถอนประกัน"
+				if ($command[0] == 'wdr') {
+					$messages = [
+						'type' => 'template',
+						'altText' => 'This is a confirm template',
+						'template' => array(
+								"type" => "confirm",
+								"text" => "ต้องการถอนหลักประกัน บัญชี 99-12345-4 จำนวน ".$command[1]." บาท ",
+								"actions" => array(
+										array(
+										    "type" => "message",
+										    "label" => "Confirm",
+										    "text" => "ดำเนินการถอนหลักประกัน \nจากบัญชี 99-12345-4 \nจำนวน ".$command[1]." บาท \nไปยัง บัญชี ATS เสร็จสิ้น"
+										),
+										array(
+										    "type" => "message",
+										    "label" => "No",
+										    "text" => "ยกเลิกการถอนประกัน"
+										)
 									)
 								)
-						)
-				];
-			}
-			
+					];
+				}
 		} catch (Exception $e) {
 			$messages = [
 				'type' => 'text',
