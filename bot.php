@@ -165,6 +165,7 @@ if (!is_null($events['events'])) {
 								)
 					];
 				}
+			}
 		} catch (Exception $e) {
 			$messages = [
 				'type' => 'text',
