@@ -119,6 +119,11 @@ if (!is_null($events['events'])) {
 			}
 			else {
 				$command = explode(" ",$text);
+				if (is_numeric($command[1])) {
+					$command[1] = number_format($command[1]);
+				} else {
+					throw new Exception();
+				}
 				
 				if ($command[0] == 'dep') {
 					$messages = [
