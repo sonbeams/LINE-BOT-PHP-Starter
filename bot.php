@@ -18,8 +18,8 @@ if (!is_null($events['events'])) {
 			/*$messages = [
 				'type' => 'text',
 				'text' => 'เลขบัญชีของท่านคือ'.$text //$text
-			];*/
-			
+			];*/	
+
 		try {
 			if ($text == 'test') {
 				$messages = [
@@ -28,31 +28,31 @@ if (!is_null($events['events'])) {
 					'template' => [
 						'type' => 'carousel',
 						'columns' => array(
-							array("thumbnailImageUrl" => "https://www.img.in.th/images/90e08230ea70df009df00502147814a8.png",
-							"title" => "Quant Trading",
-							"text" => "Short term trading",
+							array("thumbnailImageUrl" => "https://img.in.th/images/6c0d8dc2f11227d6479b3dfbfcc37c49.png",
+							"title" => "Deep Value",
+							"text" => "ลงทุนระยะยาว ด้วยปัจจัย valuation ที่ซ่อนอยู่",
 							"actions" => array(
 								array("type" => "message",
 								"label" => "View portfolio",
+								"text" => "deep value"
+								),
+								array("type" => "uri",
+								"label" => "Read more",
+								"uri" => "https://sonbeams.wixsite.com/trinityacademy/single-post/2017/02/23/Deep-Value"
+								)
+							    )
+							),
+							array("thumbnailImageUrl" => "https://img.in.th/images/dab040a3d72fe484064f40c40b87f898.png",
+							"title" => "The Perfect Gems",
+							"text" => "ลงทุนระยะกลาง ด้วยปัจจัยหนุน ด้านจุดเด่นของธุรกิจที่ตลาดกำลังให้ความสนใจ",
+							"actions" => array(
+								array("type" => "message",
+								"label" => "View Portfolio",
 								"text" => "perfect gems"
 								),
 								array("type" => "uri",
 								"label" => "Read more",
-								"uri" => "https://www.trinityquicktrade.com"
-								)
-							    )
-							),
-							array("thumbnailImageUrl" => "https://www.img.in.th/images/86be082e281fba804d9c8b05b91b5c57.png",
-							"title" => "Trinity Trigger",
-							"text" => "Short term trading",
-							"actions" => array(
-								array("type" => "message",
-								"label" => "View Portfolio",
-								"text" => "seafco"
-								),
-								array("type" => "uri",
-								"label" => "View detail",
-								"uri" => "https://www.trinitythai.com"
+								"uri" => "https://sonbeams.wixsite.com/trinityacademy/single-post/2016/03/30/Top-5-Beaches-in-Corfu"
 								)
 							    )
 							)
