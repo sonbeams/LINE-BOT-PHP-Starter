@@ -7,21 +7,6 @@ function stocksData() {
       array("PTT", 404.00, -2.00, -0.49, 696, 1419, 402.65,  404.00, 402.00)
     );
 }
-/*function stocksData() {
-    return array(
-      "stock1" => array(
-	 "stock" => "CPF", 
-	 "price" => 28.75,
-	 "chg" => 1.00,
-	 "pchg" => +3.6,
-	 "mktval" => 2358,
-	 "mktvol" => 89714,
-	 "avg" => 28.20,
-	 "high" => 29.00,
-	 "low" => 27.50
-	)
-    );
-}*/
 
 $access_token = 'IIckEKH4AEo7xgc74LJmTYBxU39gbny9jEwIbmroCsSTMFmg8RpQ1QPgVIm7kqrR4yO/0g0l/JvCX30uMq+WdFhjDXNuvZfo96+IrLgSZxJ2m2spr+eTIVo17dniDcIknwVf5BvWSFAs0yV3MuGY/gdB04t89/1O/w1cDnyilFU=';
 // Get POST body content
