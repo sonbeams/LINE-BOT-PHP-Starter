@@ -31,7 +31,7 @@ if (!is_null($events['events'])) {
       try {
         $messages = [
           'type' => 'text',
-          'text' => $stocks[0]
+          'text' => $stocks[0]["stock"]
         ];
       } catch (Exception $e) {
         $messages = [
