@@ -7,10 +7,11 @@
       "stock3" => array("stock" => "PTT", "price" => 404.00, "chg" => -2.00, "pchg" => -0.49, "mktval" => 696, "mktvol" => 1419, "avg" => 402.65, "high" => 404.00, "low" => 402.00)
     );
     return $stocks;
-}
-function stocksInit() {
-   return 'test init';
 }*/
+
+function stocksInitial() {
+   return 'test init';
+}
 
 $access_token = 'IIckEKH4AEo7xgc74LJmTYBxU39gbny9jEwIbmroCsSTMFmg8RpQ1QPgVIm7kqrR4yO/0g0l/JvCX30uMq+WdFhjDXNuvZfo96+IrLgSZxJ2m2spr+eTIVo17dniDcIknwVf5BvWSFAs0yV3MuGY/gdB04t89/1O/w1cDnyilFU=';
 // Get POST body content
