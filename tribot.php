@@ -1,17 +1,17 @@
 <?php
 
-/*function stocksData() {
+function stocksData() {
     $stocks => array(
       "stock1" => array("stock" => "CPF", "price" => 28.75, "chg" => 1.00, "pchg" => +3.6, "mktval" => 2358, "mktvol" => 89714, "avg" => 28.20, "high" => 29.00, "low" => 27.50),
       "stock2" => array("stock" => "CPALL", "price" => 59.00, "chg" => 0.25, "pchg" => -0.42, "mktval" => 1063, "mktvol" => 19944, "avg" => 58.92, "high" => 59.25, "low" => 58.50),
       "stock3" => array("stock" => "PTT", "price" => 404.00, "chg" => -2.00, "pchg" => -0.49, "mktval" => 696, "mktvol" => 1419, "avg" => 402.65, "high" => 404.00, "low" => 402.00)
     );
     return $stocks;
-}*/
-
-function stocksData() {
-   return 'test init';
 }
+
+/*function stocksData() {
+   return 'test init';
+}*/
 
 $access_token = 'IIckEKH4AEo7xgc74LJmTYBxU39gbny9jEwIbmroCsSTMFmg8RpQ1QPgVIm7kqrR4yO/0g0l/JvCX30uMq+WdFhjDXNuvZfo96+IrLgSZxJ2m2spr+eTIVo17dniDcIknwVf5BvWSFAs0yV3MuGY/gdB04t89/1O/w1cDnyilFU=';
 // Get POST body content
@@ -35,7 +35,7 @@ if (!is_null($events['events'])) {
       try {
         $messages = [
           'type' => 'text',
-          'text' => $stocks
+          'text' => 'test'
         ];
       } catch (Exception $e) {
         $messages = [
