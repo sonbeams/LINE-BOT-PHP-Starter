@@ -9,7 +9,7 @@
     return $stocks;
 }*/
 function stocksData() {
-    $stocks => array(
+    return array(
       "stock1" => array(
 	 "stock" => "CPF", 
 	 "price" => 28.75,
@@ -22,7 +22,6 @@ function stocksData() {
 	 "low" => 27.50
 	)
     );
-    return $stocks;
 }
 
 /*function stocksData() {
