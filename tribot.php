@@ -33,8 +33,10 @@ if (!is_null($events['events'])) {
       
       try {
         $messages = [
+	  //$key = array_search($text
+		
           'type' => 'text',
-          'text' => $stocks[0][0]
+          'text' => $stocks[0][0]." ".$text
         ];
       } catch (Exception $e) {
         $messages = [
