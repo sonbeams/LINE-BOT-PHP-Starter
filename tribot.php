@@ -2,9 +2,9 @@
 
 function stocksData() {
     return array(
-      "stock1" => array("stock" => "CPF", "price" => 28.75, "chg" => 1.00, "pchg" => +3.6, "mktval" => 2358, "mktvol" => 89714, "avg" => 28.20, "high" => 29.00, "low" => 27.50),
-      "stock2" => array("stock" => "CPALL", "price" => 59.00, "chg" => 0.25, "pchg" => -0.42, "mktval" => 1063, "mktvol" => 19944, "avg" => 58.92, "high" => 59.25, "low" => 58.50),
-      "stock3" => array("stock" => "PTT", "price" => 404.00, "chg" => -2.00, "pchg" => -0.49, "mktval" => 696, "mktvol" => 1419, "avg" => 402.65, "high" => 404.00, "low" => 402.00)
+      array("CPF", 28.75, 1.00, +3.6, 2358, 89714, 28.20, 29.00, 27.50),
+      array("CPALL", 59.00, 0.25, -0.42, 1063, 19944, 58.92, 59.25, 58.50),
+      array("PTT", 404.00, -2.00, -0.49, 696, 1419, 402.65,  404.00, 402.00)
     );
 }
 /*function stocksData() {
@@ -40,12 +40,12 @@ if (!is_null($events['events'])) {
 	 $replyToken = $event['replyToken'];
 	 //Build message to reply back
       
-         $stocks = stocksData();
+         $stocks[][] = stocksData();
       
       try {
         $messages = [
           'type' => 'text',
-          'text' => 'test stock'
+          'text' => $stocks[0][0]
         ];
       } catch (Exception $e) {
         $messages = [
