@@ -15,7 +15,7 @@ $content = file_get_contents('php://input');
 
 $events = json_decode($content, true);
 
-if (!is_null($events['events'])) {
+/*if (!is_null($events['events'])) {
 
    foreach ($events['events'] as $event) {
 
@@ -23,7 +23,7 @@ if (!is_null($events['events'])) {
 
 	 $text = $event['message']['text'];
 
-	 $replyToken = $event['replyToken'];
+	 $replyToken = $event['replyToken'];*/
 	 $text = 'PTT';
       
          $stocks = array(
