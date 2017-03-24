@@ -15,7 +15,7 @@ $content = file_get_contents('php://input');
 
 $events = json_decode($content, true);
 
-/*if (!is_null($events['events'])) {
+if (!is_null($events['events'])) {
 
    foreach ($events['events'] as $event) {
 
@@ -23,8 +23,7 @@ $events = json_decode($content, true);
 
 	 $text = $event['message']['text'];
 
-	 $replyToken = $event['replyToken'];*/
-	 $text = 'PTT';
+	 $replyToken = $event['replyToken'];
       
          $stocks = array(
 	      array("CPF", 28.75, 1.00, +3.6, 2358, 89714, 28.20, 29.00, 27.50),
@@ -44,7 +43,7 @@ $events = json_decode($content, true);
 		    "Avg : ".$stocks[$key][5]."\n".
 		    "High : ".$stocks[$key][6]."\n".
 		    "Low : ".$stocks[$key][7]."\n".
-		    "[".date("d/m/YYY hh:mm")."]"
+		    "[".date("d/m/Y h:m")."]"
         ];
       } catch (Exception $e) {
         $messages = [
@@ -54,7 +53,7 @@ $events = json_decode($content, true);
       }
 			
       // Make a POST Request to Messaging API to reply to sender
-      /*$url = 'https://api.line.me/v2/bot/message/reply';
+      $url = 'https://api.line.me/v2/bot/message/reply';
       $data = [
 		'replyToken' => $replyToken,
 		'messages' => [$messages],
@@ -69,12 +68,12 @@ $events = json_decode($content, true);
       curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
       $result = curl_exec($ch);
       curl_close($ch);
-      echo $result . "\r\n";*/
-      /*}
+      echo $result . "\r\n";
+      }
    }
-}*/
+}
 echo "OK\n";
-echo $messages['text'];
+//echo $messages['text'];
 
 ?>
 
