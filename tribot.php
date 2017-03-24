@@ -35,7 +35,7 @@ if (!is_null($events['events'])) {
 	$key = searchForId($text, $stocks);
         if ($stocks[$key][2] > 0) {
 	   $dir = "􀔃􀇫small green triangle􏿿 - 􀔃􀇯large green triangle􏿿";
-	} elseif ($stocks[$key][2] < 0 {
+	} elseif ($stocks[$key][2] < 0) {
 	   $dir = "🔻";
 	} else {
 	   $dir = "􀔃􀅃minus􏿿";
