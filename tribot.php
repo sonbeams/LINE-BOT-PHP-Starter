@@ -15,7 +15,7 @@ $content = file_get_contents('php://input');
 
 $events = json_decode($content, true);
 
-/*if (!is_null($events['events'])) {
+if (!is_null($events['events'])) {
 
    foreach ($events['events'] as $event) {
 
@@ -23,8 +23,8 @@ $events = json_decode($content, true);
 
 	 $text = $event['message']['text'];
 
-	 $replyToken = $event['replyToken'];*/
-	 $text = 'CPALL';
+	 $replyToken = $event['replyToken'];
+	 $text = 'PTT';
       
          $stocks = array(
 	      array("CPF", 28.75, 1.00, +3.6, 2358, 89714, 28.20, 29.00, 27.50),
@@ -36,15 +36,15 @@ $events = json_decode($content, true);
 	$key = searchForId($text, $stocks);
         $messages = [	
           'type' => 'text',
-          'text' => $stocks[0][0]." (up)\n".
-		    "Price : ".$stocks[0][1]."\n".
+          'text' => $stocks[$key][0]." (up)\n".
+		    "Price : ".$stocks[$key][1]."\n".
 		    "Chg : ".$stocks[$key][2]."\n".
 		    "Mkt Value: ".$stocks[$key][3]."\n".
 		    "Mkt Vol : ".$stocks[$key][4]."\n".
 		    "Avg : ".$stocks[$key][5]."\n".
 		    "High : ".$stocks[$key][6]."\n".
 		    "Low : ".$stocks[$key][7]."\n".
-		    "[24/10/2017 15:11]"
+		    "[".date("d/m/YYY hh:mm")."]"
         ];
       } catch (Exception $e) {
         $messages = [
