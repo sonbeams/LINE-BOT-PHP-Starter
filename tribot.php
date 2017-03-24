@@ -36,8 +36,8 @@ $events = json_decode($content, true);
 	$key = searchForId($text, $stocks);
         $messages = [	
           'type' => 'text',
-          'text' => $stock[$key][0]." (up)\n".
-		    "Price : ".$stock[$key][1]."\n".
+          'text' => $stock[0][0]." (up)\n".
+		    "Price : ".$stock[0][1]."\n".
 		    "Chg : ".$stock[$key][2]."\n".
 		    "Mkt Value: ".$stock[$key][3]."\n".
 		    "Mkt Vol : ".$stock[$key][4]."\n".
@@ -74,7 +74,7 @@ $events = json_decode($content, true);
    }
 }*/
 echo "OK\n";
-echo $messages['text'];
+echo $key;
 
 ?>
 
