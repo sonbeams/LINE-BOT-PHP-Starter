@@ -74,7 +74,7 @@ $events = json_decode($content, true);
    }
 }*/
 echo "OK\n";
-echo $key;
+echo $messages['text'];
 
 ?>
 
