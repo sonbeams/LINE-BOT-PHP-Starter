@@ -25,10 +25,10 @@ if (!is_null($events['events'])) {
       
       try {
         $messages = [
-	  $key = multidimensional_search($text, $stocks);
+	  //$key = multidimensional_search($text, $stocks);
 		
           'type' => 'text',
-          'text' => $stocks[0][0]." ".$key
+          'text' => $stocks[0][0]
         ];
       } catch (Exception $e) {
         $messages = [
