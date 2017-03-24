@@ -24,7 +24,7 @@ $events = json_decode($content, true);
 	 $text = $event['message']['text'];
 
 	 $replyToken = $event['replyToken'];*/
-
+	 $text = 'CPALL';
       
          $stocks = array(
 	      array("CPF", 28.75, 1.00, +3.6, 2358, 89714, 28.20, 29.00, 27.50),
@@ -36,7 +36,15 @@ $events = json_decode($content, true);
 	$key = searchForId($text, $stocks);
         $messages = [	
           'type' => 'text',
-          'text' => $stocks[0][0]." ".$key
+          'text' => $stock[$key][0]." (up)\n".
+		    "Price : ".$stock[$key][1]."\n".
+		    "Chg : ".$stock[$key][2]."\n".
+		    "Mkt Value: ".$stock[$key][3]."\n".
+		    "Mkt Vol : ".$stock[$key][4]."\n".
+		    "Avg : ".$stock[$key][5]."\n".
+		    "High : ".$stock[$key][6]."\n".
+		    "Low : ".$stock[$key][7]."\n".
+		    "[24/10/2017 15:11]"
         ];
       } catch (Exception $e) {
         $messages = [
