@@ -1,13 +1,5 @@
 <?php
 
-function stocksData() {
-    return array(
-      array("CPF", 28.75, 1.00, +3.6, 2358, 89714, 28.20, 29.00, 27.50),
-      array("CPALL", 59.00, 0.25, -0.42, 1063, 19944, 58.92, 59.25, 58.50),
-      array("PTT", 404.00, -2.00, -0.49, 696, 1419, 402.65,  404.00, 402.00)
-    );
-}
-
 $access_token = 'IIckEKH4AEo7xgc74LJmTYBxU39gbny9jEwIbmroCsSTMFmg8RpQ1QPgVIm7kqrR4yO/0g0l/JvCX30uMq+WdFhjDXNuvZfo96+IrLgSZxJ2m2spr+eTIVo17dniDcIknwVf5BvWSFAs0yV3MuGY/gdB04t89/1O/w1cDnyilFU=';
 // Get POST body content
 $content = file_get_contents('php://input');
@@ -33,7 +25,7 @@ if (!is_null($events['events'])) {
       
       try {
         $messages = [
-	  $key = array_search($text, $stocks);
+	  $key = multidimensional_search($text, $stocks);
 		
           'type' => 'text',
           'text' => $stocks[0][0]." ".$key
