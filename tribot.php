@@ -36,14 +36,14 @@ $events = json_decode($content, true);
 	$key = searchForId($text, $stocks);
         $messages = [	
           'type' => 'text',
-          'text' => $stock[0][0]." (up)\n".
-		    "Price : ".$stock[0][1]."\n".
-		    "Chg : ".$stock[$key][2]."\n".
-		    "Mkt Value: ".$stock[$key][3]."\n".
-		    "Mkt Vol : ".$stock[$key][4]."\n".
-		    "Avg : ".$stock[$key][5]."\n".
-		    "High : ".$stock[$key][6]."\n".
-		    "Low : ".$stock[$key][7]."\n".
+          'text' => $stocks[0][0]." (up)\n".
+		    "Price : ".$stocks[0][1]."\n".
+		    "Chg : ".$stocks[$key][2]."\n".
+		    "Mkt Value: ".$stocks[$key][3]."\n".
+		    "Mkt Vol : ".$stocks[$key][4]."\n".
+		    "Avg : ".$stocks[$key][5]."\n".
+		    "High : ".$stocks[$key][6]."\n".
+		    "Low : ".$stocks[$key][7]."\n".
 		    "[24/10/2017 15:11]"
         ];
       } catch (Exception $e) {
