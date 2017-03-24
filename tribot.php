@@ -33,9 +33,17 @@ if (!is_null($events['events'])) {
       
       try {
 	$key = searchForId($text, $stocks);
+        if ($sotkcs[$key][2] > 0) {
+	   $dir = "􀔃􀇫small green triangle􏿿"."-"." 􀔃􀇯large green triangle􏿿";
+	} elseif ($sotkcs[$key][2] < 0 {
+	   $dir = "🔻";
+	} else {
+	   $dir = "􀔃􀅃minus􏿿";
+	}
+	      
         $messages = [	
           'type' => 'text',
-          'text' => $stocks[$key][0]." (up)\n".
+          'text' => $stocks[$key][0]." ".$dir."\n\n".
 		    "Price : ".$stocks[$key][1]."\n".
 		    "Chg : ".$stocks[$key][2]."\n".
 		    "Mkt Value: ".$stocks[$key][3]."\n".
