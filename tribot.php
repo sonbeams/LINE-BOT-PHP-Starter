@@ -37,7 +37,8 @@ $events = json_decode($content, true);
 	  //$key = searchForId($text, $stocks);
 		
           'type' => 'text',
-          'text' => $stocks[0][0]
+          //'text' => $stocks[0][0]
+	  'text' => 'test'
         ];
       } catch (Exception $e) {
         $messages = [
