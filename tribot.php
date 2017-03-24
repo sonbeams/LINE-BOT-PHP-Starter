@@ -2,7 +2,7 @@
 
 function searchForId($id, $array) {
    foreach ($array as $key => $val) {
-       if ($val['uid'] === $id) {
+       if ($val[0] === $id) {
            return $key;
        }
    }
