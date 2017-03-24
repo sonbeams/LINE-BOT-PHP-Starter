@@ -1,5 +1,14 @@
 <?php
 
+function searchForId($id, $array) {
+   foreach ($array as $key => $val) {
+       if ($val[0] === $id) {
+           return $key;
+       }
+   }
+   return null;
+}
+
 $access_token = 'IIckEKH4AEo7xgc74LJmTYBxU39gbny9jEwIbmroCsSTMFmg8RpQ1QPgVIm7kqrR4yO/0g0l/JvCX30uMq+WdFhjDXNuvZfo96+IrLgSZxJ2m2spr+eTIVo17dniDcIknwVf5BvWSFAs0yV3MuGY/gdB04t89/1O/w1cDnyilFU=';
 // Get POST body content
 $content = file_get_contents('php://input');
@@ -25,10 +34,10 @@ if (!is_null($events['events'])) {
       
       try {
         $messages = [
-	  //$key = multidimensional_search($text, $stocks);
+	  $key = searchForId($text, $stocks);
 		
           'type' => 'text',
-          'text' => $stocks[0][0]
+          'text' => $stocks[0][0]." ".$key
         ];
       } catch (Exception $e) {
         $messages = [
