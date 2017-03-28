@@ -45,14 +45,13 @@ if (!is_null($events['events'])) {
           'type' => 'text',
           'text' => $stocks[$key][0]." ".$dir."\n\n".
 		    "Price : ".number_format($stocks[$key][1],2)."\n".
-		    "Chg : ".number_format($stocks[$key][2],2)."\n".
-		    "%Chg : ".number_format($stocks[$key][3],2)."%\n".
+		    "Chg : ".number_format($stocks[$key][2],2)." , ".number_format($stocks[$key][3],2)."%\n".
 		    "Mkt Value: ".$stocks[$key][4]." MB\n".
 		    "Mkt Vol : ".$stocks[$key][5]." MB\n".
 		    "Avg : ".number_format($stocks[$key][6],2)."\n".
 		    "High : ".number_format($stocks[$key][7],2)."\n".
-		    "Low : ".number_format($stocks[$key][8],2)."\n".
-		    "[".date("d/m/Y h:m")."]"
+		    "Low : ".number_format($stocks[$key][8],2)."\n\n".
+		    ":clock10: [".date("d/m/Y h:m")."]"
         ];
       } catch (Exception $e) {
         $messages = [
