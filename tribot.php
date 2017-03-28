@@ -47,7 +47,8 @@ if (!is_null($events['events'])) {
 	$cmd = count($stk_list);
 	
 	if ($text == "SET") {
-	   $messages = [
+	   $messages = array(
+		   array(
 	   'type' => 'text',
 	   'text' => "SET index : 1,585.72\n".
 		     "Change : -2.46 , -0.16%\n".
@@ -57,11 +58,15 @@ if (!is_null($events['events'])) {
 		     "🏢 บัญชีบล. : -536 MB\n".
 		     "🌍 ต่างประเทศ : +1,533 MB\n\n".
 		     "🕙  [".date("d/m/Y h:m")."]"
-	   ];
+		   ),
+		   array(
+	    'type' => 'text',
+	    'text' => "second text"
+	           )
+	    )
 	}
 	elseif ($cmd == 1) {
-	   $messages = array(
-		   array(
+	   $messages = [
            'type' => 'text',
            'text' => $stocks[$key][0]." ".$dir."\n\n".
 		    "Price : ".number_format($stocks[$key][1],2)."\n".
@@ -72,11 +77,6 @@ if (!is_null($events['events'])) {
 		    "High : ".number_format($stocks[$key][7],2)."\n".
 		    "Low : ".number_format($stocks[$key][8],2)."\n\n".
 		    "🕙  [".date("d/m/Y h:m")."]"
-		   ),
-		   array(
-	   'type' => 'text',
-	   'text' => 'second text')
-	   )
            ]; 
 	} else {
 	   $txt_cmd = "";
