@@ -57,10 +57,6 @@ if (!is_null($events['events'])) {
 		     "🏢 โบรกเกอร์ : -536 MB\n".
 		     "🌍 ต่างประเทศ : +1,533 MB\n\n".
 		     "🕙  [".date("d/m/Y h:m")."]"
-			),
-		   array(
-	     'type' => 'text',
-	     'text' => 'test'
 	   ];
 	   	   $messages2 = [
 		   'type' => 'text',
@@ -116,7 +112,7 @@ if (!is_null($events['events'])) {
       $url = 'https://api.line.me/v2/bot/message/reply';
       $data = [
 		'replyToken' => $replyToken,
-		'messages' => [$messages,$message2],
+		'messages' => [$messages,$messages2],
       ];
       $post = json_encode($data);
       $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
