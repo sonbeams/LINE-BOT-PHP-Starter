@@ -47,13 +47,14 @@ if (!is_null($events['events'])) {
 	if ($text == "SET") {
 	   $messages = [
 	   'type' => 'text',
-	   'text' => "SET index : 1,585.72\n
-		     Change : -2.46 , -0.16%\n
-		     Trade val : 35,685 MB\n
-		     👨‍👩‍👧 นักลงทุนทั่วไป : -1,071 MB\n
-		     🏛 สถานบัน : +75 MB\n
-		     🏢 บัญชีบล. : -536 MB\n
-		     🌍 ต่างประเทศ : +1,533 MB\n"
+	   'text' => "SET index : 1,585.72\n".
+		     "Change : -2.46 , -0.16%\n".
+		     "Trade val : 35,685 MB\n".
+		     "👨‍👩‍👧 นักลงทุนทั่วไป : -1,071 MB\n".
+		     "🏛 สถานบัน : +75 MB\n".
+		     "🏢 บัญชีบล. : -536 MB\n".
+		     "🌍 ต่างประเทศ : +1,533 MB\n\n".
+		     "🕙  [".date("d/m/Y h:m")."]"
 	   ];
 	}
 	elseif ($cmd == 1) {
