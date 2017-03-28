@@ -60,7 +60,8 @@ if (!is_null($events['events'])) {
 	   ];
 	}
 	elseif ($cmd == 1) {
-	   $messages = [	
+	   $messages = array(
+		   array(
            'type' => 'text',
            'text' => $stocks[$key][0]." ".$dir."\n\n".
 		    "Price : ".number_format($stocks[$key][1],2)."\n".
@@ -71,6 +72,11 @@ if (!is_null($events['events'])) {
 		    "High : ".number_format($stocks[$key][7],2)."\n".
 		    "Low : ".number_format($stocks[$key][8],2)."\n\n".
 		    "🕙  [".date("d/m/Y h:m")."]"
+		   ),
+		   array(
+	   'type' => 'text',
+	   'text' => 'second text')
+	   )
            ]; 
 	} else {
 	   $txt_cmd = "";
