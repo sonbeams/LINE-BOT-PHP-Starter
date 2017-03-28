@@ -41,7 +41,7 @@ if (!is_null($events['events'])) {
 	   $dir = "▬";
 	}
 	      
-	$stk_list = explode($text,",");
+	$stk_list = explode(",",$text);
 	$cmd = count($stk_list);
 	 
 	if($cmd == 1) {
