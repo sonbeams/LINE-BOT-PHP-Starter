@@ -51,7 +51,7 @@ if (!is_null($events['events'])) {
 		    "Avg : ".number_format($stocks[$key][6],2)."\n".
 		    "High : ".number_format($stocks[$key][7],2)."\n".
 		    "Low : ".number_format($stocks[$key][8],2)."\n\n".
-		    ":clock10: [".date("d/m/Y h:m")."]"
+		    ":clock10: 🕙 U+1F559 [".date("d/m/Y h:m")."]"
         ];
       } catch (Exception $e) {
         $messages = [
