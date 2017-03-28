@@ -30,7 +30,7 @@ if (!is_null($events['events'])) {
 	      array("CPALL", 59.00, 0.25, -0.42, 1063, 19944, 58.92, 59.25, 58.50),
 	      array("PTT", 404.00, -2.00, -0.49, 696, 1419, 402.65,  404.00, 402.00)
 	 );
-      
+	      
       try {
 	$key = searchForId($text, $stocks);
         if ($stocks[$key][2] > 0) {
@@ -41,9 +41,13 @@ if (!is_null($events['events'])) {
 	   $dir = "▬";
 	}
 	      
-        $messages = [	
-          'type' => 'text',
-          'text' => $stocks[$key][0]." ".$dir."\n\n".
+	$stk_list = explode($text,",");
+	$cmd = count($stk_list);
+	 
+	if($cmd == 1) {
+	   $messages = [	
+           'type' => 'text',
+           'text' => $stocks[$key][0]." ".$dir."\n\n".
 		    "Price : ".number_format($stocks[$key][1],2)."\n".
 		    "Chg : ".number_format($stocks[$key][2],2)." , ".number_format($stocks[$key][3],2)."%\n".
 		    "Mkt Value: ".number_format($stocks[$key][4],0)." MB\n".
@@ -51,8 +55,23 @@ if (!is_null($events['events'])) {
 		    "Avg : ".number_format($stocks[$key][6],2)."\n".
 		    "High : ".number_format($stocks[$key][7],2)."\n".
 		    "Low : ".number_format($stocks[$key][8],2)."\n\n".
-		    ":clock10: 🕙 U+1F559 [".date("d/m/Y h:m")."]"
-        ];
+		    "🕙 [".date("d/m/Y h:m")."]"
+           ]; 
+	} else {
+	   $txt_cmd = "";
+	   foreach ($stk_list as $list) {
+		   $key = searchForId($list, $stocks);
+		   $txt_cmd .= $stocks[$key][0]."/n";
+	   }
+	   $messages = [
+	   'type' => 'text',
+	   'text' => $txt_cmd."\n🕙 [".date("d/m/Y h:m")."]"
+	   ];
+	}
+      
+     
+	      
+       
       } catch (Exception $e) {
         $messages = [
           'type' => 'text',
