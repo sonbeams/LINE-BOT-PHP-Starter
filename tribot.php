@@ -55,7 +55,7 @@ if (!is_null($events['events'])) {
 		    "Avg : ".number_format($stocks[$key][6],2)."\n".
 		    "High : ".number_format($stocks[$key][7],2)."\n".
 		    "Low : ".number_format($stocks[$key][8],2)."\n\n".
-		    "🕙 [".date("d/m/Y h:m")."]"
+		    "🕙  [".date("d/m/Y h:m")."]"
            ]; 
 	} else {
 	   $txt_cmd = "";
@@ -68,11 +68,11 @@ if (!is_null($events['events'])) {
 		   } else {
 		      $dir = "▬";
 		   }
-		   $txt_cmd .= $dir." ".$stocks[$key][0]." : ".$stocks[$key][1].", ".$stocks[$key][2].", ".$stocks[$key][3]."\n";
+		   $txt_cmd .= $dir." ".$stocks[$key][0]." : ".$stocks[$key][1].", ".$stocks[$key][2].", ".$stocks[$key][3]."%\n";
 	   }
 	   $messages = [
 	   'type' => 'text',
-	   'text' => $txt_cmd."\n🕙 [".date("d/m/Y h:m")."]"
+	   'text' => $txt_cmd."\n🕙  [".date("d/m/Y h:m")."]"
 	   ];
 	}
       
