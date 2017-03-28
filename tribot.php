@@ -47,8 +47,7 @@ if (!is_null($events['events'])) {
 	$cmd = count($stk_list);
 	
 	if ($text == "SET") {
-	   $messages = array(
-		   array(
+	   $messages = [
 	   'type' => 'text',
 	   'text' => "SET index : 1,585.72\n".
 		     "Change : -2.46 , -0.16%\n".
@@ -62,8 +61,11 @@ if (!is_null($events['events'])) {
 		   array(
 	     'type' => 'text',
 	     'text' => 'test'
-		   	)
-	   );
+	   ];
+	   	   $messages2 = [
+		   'type' => 'text',
+		   'text' => 'test'
+	   ];
 	}
 	elseif ($cmd == 1) {
 	   $messages = [
@@ -78,10 +80,6 @@ if (!is_null($events['events'])) {
 		    "Low : ".number_format($stocks[$key][8],2)."\n\n".
 		    "🕙  [".date("d/m/Y h:m")."]"
            ];
-	   $messages2 = [
-		   'type' => 'text',
-		   'text' => 'test'
-	   ];
 	} else {
 	   $txt_cmd = "";
 	   foreach ($stk_list as $list) {
