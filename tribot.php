@@ -44,7 +44,7 @@ if (!is_null($events['events'])) {
 	$stk_list = explode(",",$text);
 	$cmd = count($stk_list);
 	
-	if ($text == "SET" or $text == "set") {
+	/*if ($text == "SET" or $text == "set") {
 	   'type' => 'text',
 	   'text' => "SET index : 1,585.72\n".
 		     "Change : -2.46 , -0.16%\n".
@@ -54,7 +54,8 @@ if (!is_null($events['events'])) {
 		     "🏢 บัญชีบล. : -536 MB\n".
 		     " ต่างประเทศ : +1,533 MB\n"
 	}
-	elseif ($cmd == 1) {
+	elseif ($cmd == 1) {*/
+	if ($cmd == 1) {
 	   $messages = [	
            'type' => 'text',
            'text' => $stocks[$key][0]." ".$dir."\n\n".
