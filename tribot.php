@@ -47,9 +47,10 @@ if (!is_null($events['events'])) {
 	$cmd = count($stk_list);
 	
 	if ($text == "SET") {
+	   $msg = 2;
 	   $messages = [
-	   'type' => 'text',
-	   'text' => "SET index : 1,585.72\n".
+	     'type' => 'text',
+	     'text' => "SET index : 1,585.72\n".
 		     "Change : -2.46 , -0.16%\n".
 		     "Trade val : 35,685 MB\n\n".
 		     "👨‍👩‍👧 รายย่อย : -1,071 MB\n".
@@ -58,15 +59,22 @@ if (!is_null($events['events'])) {
 		     "🌍 ต่างประเทศ : +1,533 MB\n\n".
 		     "🕙  [".date("d/m/Y h:m")."]"
 	   ];
-	   	   $messages2 = [
-		   'type' => 'text',
-		   'text' => 'test'
+	   $messages2 = [
+	     'type' => 'text',
+	     'text' => 'ค่าสถิติสำคัญ\n\n'.
+		       'P/E     17.31 เท่า\n'.
+		       'P/BV    1.92  เท่า\n\n'.
+		       'อัตราปันผลตอบแทน 3.14\n'.
+		       'การเปลี่ยนแปลงในรอบ 3 เดือน +3.99%\n'.
+		       'การเปลี่ยนแปลงในรอบ 6 เดือน +5.49%\n'.
+		       'การเปลี่ยนแปลงในรอบ 1 ปี   +1.67%\n'
 	   ];
 	}
 	elseif ($cmd == 1) {
+	   $msg = 1;
 	   $messages = [
-           'type' => 'text',
-           'text' => $stocks[$key][0]." ".$dir."\n\n".
+             'type' => 'text',
+             'text' => $stocks[$key][0]." ".$dir."\n\n".
 		    "Price : ".number_format($stocks[$key][1],2)."\n".
 		    "Chg : ".number_format($stocks[$key][2],2)." , ".number_format($stocks[$key][3],2)."%\n".
 		    "Mkt Value: ".number_format($stocks[$key][4],0)." MB\n".
@@ -77,6 +85,7 @@ if (!is_null($events['events'])) {
 		    "🕙  [".date("d/m/Y h:m")."]"
            ];
 	} else {
+	   $msg = 1;
 	   $txt_cmd = "";
 	   foreach ($stk_list as $list) {
 		   $key = searchForId($list, $stocks);
@@ -102,6 +111,7 @@ if (!is_null($events['events'])) {
 	      
        
       } catch (Exception $e) {
+	$msg = 1;
         $messages = [
           'type' => 'text',
           'text' => 'Caught exception: '.  $e->getMessage()
@@ -110,10 +120,19 @@ if (!is_null($events['events'])) {
 			
       // Make a POST Request to Messaging API to reply to sender
       $url = 'https://api.line.me/v2/bot/message/reply';
-      $data = [
-		'replyToken' => $replyToken,
-		'messages' => [$messages,$messages2],
-      ];
+      if ($msg == 1) {
+	$data = [
+	   'replyToken' => $replyToken,
+	   'messages' => [$messages],
+        ];      
+      }
+      elseif ($msg == 2) {
+	 $data = [
+	    'replyToken' => $replyToken,
+	    'messages' => [$messages,$messages2],
+        ];
+      }
+      
       $post = json_encode($data);
       $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
       $ch = curl_init($url);
