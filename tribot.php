@@ -31,6 +31,8 @@ if (!is_null($events['events'])) {
 	      array("PTT", 404.00, -2.00, -0.49, 696, 1419, 402.65,  404.00, 402.00)
 	 );
 	      
+      $text = strtoupper($text);
+	      
       try {
 	$key = searchForId($text, $stocks);
         if ($stocks[$key][2] > 0) {
@@ -49,7 +51,7 @@ if (!is_null($events['events'])) {
 	   'type' => 'text',
 	   'text' => "SET index : 1,585.72\n".
 		     "Change : -2.46 , -0.16%\n".
-		     "Trade val : 35,685 MB\n".
+		     "Trade val : 35,685 MB\n\n".
 		     "👨‍👩‍👧 นักลงทุนทั่วไป : -1,071 MB\n".
 		     "🏛 สถานบัน : +75 MB\n".
 		     "🏢 บัญชีบล. : -536 MB\n".
