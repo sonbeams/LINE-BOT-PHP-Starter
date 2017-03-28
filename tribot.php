@@ -61,7 +61,14 @@ if (!is_null($events['events'])) {
 	   $txt_cmd = "";
 	   foreach ($stk_list as $list) {
 		   $key = searchForId($list, $stocks);
-		   $txt_cmd .= $stocks[$key][0]."/n";
+		   if ($stocks[$key][2] > 0) {
+		      $dir = "△";
+		   } elseif ($stocks[$key][2] < 0) {
+		      $dir = "🔻";
+		   } else {
+		      $dir = "▬";
+		   }
+		   $txt_cmd .= $dir." ".$stocks[$key][0]." : ".$stocks[$key][1].", ".$stocks[$key][2].", ".$stocks[$key][3]."\n";
 	   }
 	   $messages = [
 	   'type' => 'text',
