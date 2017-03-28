@@ -38,7 +38,7 @@ if (!is_null($events['events'])) {
 	} elseif ($stocks[$key][2] < 0) {
 	   $dir = "🔻";
 	} else {
-	   $dir = "🔻";
+	   $dir = "▬";
 	}
 	      
         $messages = [	
