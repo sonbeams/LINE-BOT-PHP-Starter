@@ -61,9 +61,9 @@ if (!is_null($events['events'])) {
 		   ),
 		   array(
 	    'type' => 'text',
-	    'text' => "second text"
+	    'text' => 'second text'
 	           )
-	    )
+	    );
 	}
 	elseif ($cmd == 1) {
 	   $messages = [
