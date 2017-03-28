@@ -43,8 +43,18 @@ if (!is_null($events['events'])) {
 	      
 	$stk_list = explode(",",$text);
 	$cmd = count($stk_list);
-	 
-	if($cmd == 1) {
+	
+	if ($text == "SET" or $text == "set") {
+	   'type' => 'text',
+	   'text' => "SET index : 1,585.72\n".
+		     "Change : -2.46 , -0.16%\n".
+		     "Trade val : 35,685 MB\n".
+		     "👨‍👩‍👧 นักลงทุนทั่วไป : -1,071 MB\n".
+		     "🏛 สถานบัน : +75 MB\n".
+		     "🏢 บัญชีบล. : -536 MB\n".
+		     "🌍 ต่างประเทศ : +1,533 MB\n"
+	}
+	elseif ($cmd == 1) {
 	   $messages = [	
            'type' => 'text',
            'text' => $stocks[$key][0]." ".$dir."\n\n".
@@ -68,7 +78,10 @@ if (!is_null($events['events'])) {
 		   } else {
 		      $dir = "▬";
 		   }
-		   $txt_cmd .= $dir." ".$stocks[$key][0]." : ".$stocks[$key][1].", ".$stocks[$key][2].", ".$stocks[$key][3]."%\n";
+		   $txt_cmd .= $dir." ".$stocks[$key][0].
+			   	  " : ".number_format($stocks[$key][1],2).
+			   	  ", ".number_format($stocks[$key][2],2).
+			   	  ", ".number_format($stocks[$key][3],2)."%\n";
 	   }
 	   $messages = [
 	   'type' => 'text',
