@@ -48,7 +48,7 @@ if (!is_null($events['events'])) {
 	
 	if ($text == "SET") {
 	   $messages = [
-	   'type' => 'text',
+	   'contentType' => 1,
 	   'text' => "SET index : 1,585.72\n".
 		     "Change : -2.46 , -0.16%\n".
 		     "Trade val : 35,685 MB\n\n".
