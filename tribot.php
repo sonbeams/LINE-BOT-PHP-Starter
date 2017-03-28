@@ -77,7 +77,11 @@ if (!is_null($events['events'])) {
 		    "High : ".number_format($stocks[$key][7],2)."\n".
 		    "Low : ".number_format($stocks[$key][8],2)."\n\n".
 		    "🕙  [".date("d/m/Y h:m")."]"
-           ]; 
+           ];
+	   $messages2 = [
+		   'type' => 'text',
+		   'text' => 'test'
+	   ];
 	} else {
 	   $txt_cmd = "";
 	   foreach ($stk_list as $list) {
@@ -114,7 +118,7 @@ if (!is_null($events['events'])) {
       $url = 'https://api.line.me/v2/bot/message/reply';
       $data = [
 		'replyToken' => $replyToken,
-		'messages' => [$messages],
+		'messages' => [$messages,$message2],
       ];
       $post = json_encode($data);
       $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
