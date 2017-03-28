@@ -48,7 +48,6 @@ if (!is_null($events['events'])) {
 	
 	if ($text == "SET") {
 	   $messages = array(
-		   array(
 	   'type' => 'text',
 	   'text' => "SET index : 1,585.72\n".
 		     "Change : -2.46 , -0.16%\n".
@@ -57,12 +56,9 @@ if (!is_null($events['events'])) {
 		     "🏛 สถานบัน : +75 MB\n".
 		     "🏢 โบรกเกอร์ : -536 MB\n".
 		     "🌍 ต่างประเทศ : +1,533 MB\n\n".
-		     "🕙  [".date("d/m/Y h:m")."]"
-		   ),
-		   array(
+		     "🕙  [".date("d/m/Y h:m")."]",
 	     'type' => 'text',
 	     'text' => 'test'
-	           )
 	   );
 	}
 	elseif ($cmd == 1) {
