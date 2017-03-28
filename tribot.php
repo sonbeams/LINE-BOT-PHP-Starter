@@ -47,8 +47,8 @@ if (!is_null($events['events'])) {
 	$cmd = count($stk_list);
 	
 	if ($text == "SET") {
-	   $messages = [
-	   'contentType' => 1,
+	   $messages = array(
+	   'type' => 'text',
 	   'text' => "SET index : 1,585.72\n".
 		     "Change : -2.46 , -0.16%\n".
 		     "Trade val : 35,685 MB\n\n".
@@ -57,7 +57,7 @@ if (!is_null($events['events'])) {
 		     "🏢 โบรกเกอร์ : -536 MB\n".
 		     "🌍 ต่างประเทศ : +1,533 MB\n\n".
 		     "🕙  [".date("d/m/Y h:m")."]"	   
-	   ];
+	   );
 	}
 	elseif ($cmd == 1) {
 	   $messages = [
