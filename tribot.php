@@ -34,7 +34,7 @@ if (!is_null($events['events'])) {
       try {
 	$key = searchForId($text, $stocks);
         if ($stocks[$key][2] > 0) {
-	   $dir = "🔻";
+	   $dir = "▲";
 	} elseif ($stocks[$key][2] < 0) {
 	   $dir = "🔻";
 	} else {
