@@ -34,11 +34,11 @@ if (!is_null($events['events'])) {
       try {
 	$key = searchForId($text, $stocks);
         if ($stocks[$key][2] > 0) {
-	   $dir = "􀔃􀇫small green triangle􏿿 - 􀔃􀇯large green triangle􏿿";
+	   $dir = "🔻";
 	} elseif ($stocks[$key][2] < 0) {
 	   $dir = "🔻";
 	} else {
-	   $dir = "􀔃􀅃minus􏿿";
+	   $dir = "🔻";
 	}
 	      
         $messages = [	
