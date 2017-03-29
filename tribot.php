@@ -95,7 +95,7 @@ if (!is_null($events['events'])) {
 		   $prt_vol = 4000;
 		   $prt_cost = 25;
 	   	}
-	   $key = searchForId($prt_stk[0], $stocks);
+	   $key = searchForId($prt_stk[1], $stocks);
 		
            if ($stocks[$key][1] > $prt_cost) {
 	      $dir = "△";
