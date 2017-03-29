@@ -103,6 +103,14 @@ if (!is_null($events['events'])) {
 		   $prt_vol = 4000;
 		   $prt_cost = 25;
 	   	}
+	   $key = searchForId($prt_stk[1], $stocks);
+              if ($stocks[$key][2] > $prt_cost) {
+	      $dir = "△";
+	      } elseif ($stocks[$key][2] < $prt_cost) {
+	      $dir = "🔻";
+	      } else {
+	      $dir = "▬";
+	   }
 		
 	   $amount = $prt_cost*$prt_vol;
 	   $gl = ($amount)-($prt_vol*$stocks[$key][1]);
@@ -110,8 +118,8 @@ if (!is_null($events['events'])) {
 	   	
 	   $messages = [
 	      'type' => 'text',
-	      'text' => $dir." ".$stocks[$key][0]." @ ".number_format($stocks[$key][1],2).
-		   " ".number_format($gl,2)." ".number_format($pgl,2)."%\n\n".
+	      'text' => $stocks[$key][0]." @ ".number_format($stocks[$key][1],2).
+		   $dir" ".number_format($gl,2)." ".number_format($pgl,2)."%\n\n".
 		   "ราคาซื้อ : ".number_format($prt_cost,2)."\n".
 		   "จำนวน   : ".number_format($prt_vol,2)."\n".
 		   "รวม	    : ".number_format($amount,2)."\n".
