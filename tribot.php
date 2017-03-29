@@ -116,8 +116,8 @@ if (!is_null($events['events'])) {
 		   "ราคาซื้อ : ".number_format($prt_cost,2)."\n".
 		   "จำนวน   : ".number_format($prt_vol,2)."\n".
 		   "รวม	    : ".number_format($amount,2)."\n".
-		   "ค่า Fee : ".number_format($amount*0.002749,2)."\n".
-		   "รวมต้นทุน : ".number_format($amount+($amount*0.002749),2)."\n".
+		   "ค่า Fee : ".number_format($amount*0.002,2)."\n".
+		   "รวมต้นทุน : ".number_format($amount+($amount*0.002),2)."\n".
 		   "มูลค่าปัจจุบัน : ".number_format($stocks[$key][1]*$prt_vol,2)."\n\n".
 		   "วันที่ทำรายการ : 15/03/2017\n".
 		   "วันที่ชำระค่าซื้่อ : 18/03/2017\n\n".
