@@ -111,8 +111,8 @@ if (!is_null($events['events'])) {
 	   	
 	   $messages = [
 	      'type' => 'text',
-	      'text' => $stocks[$key][0]." ".$dir." ".number_format($stocks[$key][1],2).
-		   number_format($gl,2)." ".number_format($pgl,2)."%\n\n".
+	      'text' => $stocks[$key][0]." "number_format($stocks[$key][1],2)." ".
+		   .$dir." ".number_format($gl,2)." ".number_format($pgl,2)."%\n\n".
 		   "ราคาซื้อ : ".number_format($prt_cost,2)."\n".
 		   "จำนวน   : ".number_format($prt_vol,2)."\n".
 		   "รวม	    : ".number_format($amount,2)."\n".
