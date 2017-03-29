@@ -48,14 +48,6 @@ if (!is_null($events['events'])) {
 	$stk_list = explode(",",$text);
 	$cmd = count($stk_list);
 	
-	// "Port" command
-	if ($text == "port") {
-	   $messages = [
-	      'type' => 'image',
-	      'originalContentUrl' => 'https://img.in.th/images/1caa7923979ef1c4684d8fc88526e943.png',
-	      'previewImageUrl' => 'https://img.in.th/images/157cfb79730a265550d20a7a87652d4e.png'
-	   ];
-	}
 	// "SET" command
 	if ($text == "SET") {
 	   $msg = 2;
@@ -79,6 +71,14 @@ if (!is_null($events['events'])) {
 		       "การเปลี่ยนแปลงในรอบ 3 เดือน +3.99%\n".
 		       "การเปลี่ยนแปลงในรอบ 6 เดือน +5.49%\n".
 		       "การเปลี่ยนแปลงในรอบ 1 ปี      +1.67%\n"
+	   ];
+	}
+	// "Port" command
+	elseif ($text == "port") {
+	   $messages = [
+	      'type' => 'image',
+	      'originalContentUrl' => 'https://img.in.th/images/1caa7923979ef1c4684d8fc88526e943.png',
+	      'previewImageUrl' => 'https://img.in.th/images/157cfb79730a265550d20a7a87652d4e.png'
 	   ];
 	}
 	// One Stock command
