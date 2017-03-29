@@ -93,7 +93,7 @@ if (!is_null($events['events'])) {
 	}
 	// "Port-Stock" command
 	elseif ($prt_stk[0] == "PORT" and $prt_stk[1] <> "") {
-	   if ($prt_stk[1] == "PTT") 
+	   /*if ($prt_stk[1] == "PTT") 
 	   	{ 
 		   $prt_vol = 2000;
 		   $prt_cost = 350; 
@@ -111,7 +111,7 @@ if (!is_null($events['events'])) {
 	      $dir = "🔻";
 	   } else {
 	      $dir = "▬";
-	   }
+	   }*/
 		
 	   $amount = $prt_cost*$prt_vol;
 	   $gl = ($amount)-($prt_vol*$stocks[$key][1]);
