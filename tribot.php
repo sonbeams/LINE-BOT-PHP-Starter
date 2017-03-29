@@ -93,7 +93,7 @@ if (!is_null($events['events'])) {
 	   elseif($prt_stk[1] == "CPF") 
 	        { 
 		   $prt_vol = 4000;
-		   $prt_cost = 25;
+		   $prt_cost = 32.25;
 	   	}
 	   $key = searchForId($prt_stk[1], $stocks);
 		
@@ -111,7 +111,7 @@ if (!is_null($events['events'])) {
 	   	
 	   $messages = [
 	      'type' => 'text',
-	      'text' => $stocks[$key][0]." ".number_format($stocks[$key][1],2)." ".
+	      'text' => $stocks[$key][0]." ".number_format($stocks[$key][1],0)." ".
 		   $dir." ".number_format($gl,2)." ".number_format($pgl,2)."%\n\n".
 		   "ราคาซื้อ : ".number_format($prt_cost,2)."\n".
 		   "จำนวน   : ".number_format($prt_vol,2)."\n".
