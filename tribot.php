@@ -74,7 +74,7 @@ if (!is_null($events['events'])) {
 	   ];
 	}
 	// "Port" command
-	elseif ($text == "port") {
+	elseif ($text == "PORT") {
 	   $messages = [
 	      'type' => 'image',
 	      'originalContentUrl' => 'https://img.in.th/images/1caa7923979ef1c4684d8fc88526e943.png',
