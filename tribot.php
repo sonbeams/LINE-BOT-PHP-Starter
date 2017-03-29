@@ -80,7 +80,48 @@ if (!is_null($events['events'])) {
 	      'originalContentUrl' => 'https://img.in.th/images/625ad187dca740ce48ad4688a97d6fef.png',
 	      'previewImageUrl' => 'https://img.in.th/images/a49ec61c791a47cfd5bdec83c3ec49e5.png'
 	   ];
-	}      
+	}
+	// "Port-Stock" command
+	elseif ($prt_stk[0] == "PORT" and $prt_stk[1] <> "") {
+	   /*if ($prt_stk[1] == "PTT") 
+	   	{ 
+		   $prt_vol = 2000;
+		   $prt_cost = 350; 
+		}
+	   elseif($prt_stk[1] == "CPF") 
+	        { 
+		   $prt_vol = 4000;
+		   $prt_cost = 25;
+	   	}
+	   $key = searchForId($prt_stk[1], $stocks);
+		
+           if ($stocks[$key][2] > $prt_cost) {
+	      $dir = "△";
+	   } elseif ($stocks[$key][2] < $prt_cost) {
+	      $dir = "🔻";
+	   } else {
+	      $dir = "▬";
+	   }*/
+		
+	   $amount = $prt_cost*$prt_vol;
+	   $gl = ($amount)-($prt_vol*$stocks[$key][1]);
+	   $pgl = $gl/($amount)*100;
+	   	
+	   $messages = [
+	      'type' => 'text',
+	      'text' => $stocks[$key][0]." @ ".number_format($stocks[$key][1],2).
+		   $dir" ".number_format($gl,2)." ".number_format($pgl,2)."%\n\n".
+		   "ราคาซื้อ : ".number_format($prt_cost,2)."\n".
+		   "จำนวน   : ".number_format($prt_vol,2)."\n".
+		   "รวม	    : ".number_format($amount,2)."\n".
+		   "ค่า Fee : ".number_format($amount*0.002,2)."\n".
+		   "รวมต้นทุน : ".number_format($amount+($amount*0.002),2)."\n\n".
+		   "วันที่ทำรายการ : 15/03/2017\n".
+		   "วันที่ชำระค่าซื้่อ : 18/03/2017\n\n".
+		   "ดูใบคอนเฟิร์ม http://www.trinityquicktrade.com\n\n".
+		    "🕙  [".date("d/m/Y h:m")."]"  
+	   ];
+	}
 	// One Stock command
 	elseif ($cmd == 1) {
 	   $messages = [
