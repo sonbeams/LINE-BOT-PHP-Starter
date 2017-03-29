@@ -94,18 +94,18 @@ if (!is_null($events['events'])) {
 		   $prt_vol = 4000;
 		   $prt_cost = 25;
 	   	}
-	   $key = searchForId($prt_stk[1], $stocks);
+	   $key = searchForId($prt_stk[0], $stocks);
 		
-           if ($stocks[$key][2] > $prt_cost) {
+           if ($stocks[$key][1] > $prt_cost) {
 	      $dir = "△";
-	   } elseif ($stocks[$key][2] < $prt_cost) {
+	   } elseif ($stocks[$key][1] < $prt_cost) {
 	      $dir = "🔻";
 	   } else {
 	      $dir = "▬";
 	   }
 		
 	   $amount = ($prt_cost*$prt_vol);
-	   $gl = ($amount)-($prt_vol*$stocks[$key][1]);
+	   $gl = ($prt_vol*$stocks[$key][1])-$amount;
 	   $pgl = $gl/$amount*100;
 	   	
 	   $messages = [
@@ -116,7 +116,8 @@ if (!is_null($events['events'])) {
 		   "จำนวน   : ".number_format($prt_vol,2)."\n".
 		   "รวม	    : ".number_format($amount,2)."\n".
 		   "ค่า Fee : ".number_format($amount*0.002,2)."\n".
-		   "รวมต้นทุน : ".number_format($amount+($amount*0.002),2)."\n\n".
+		   "รวมต้นทุน : ".number_format($amount+($amount*0.002),2)."\n".
+		   "มูลค่าปัจจุบัน : ".number_format($stocks[$key][1]*$prt_vol,2)."\n\n".
 		   "วันที่ทำรายการ : 15/03/2017\n".
 		   "วันที่ชำระค่าซื้่อ : 18/03/2017\n\n".
 		   "ดูใบคอนเฟิร์ม http://www.trinityquicktrade.com\n\n".
