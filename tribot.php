@@ -82,7 +82,7 @@ if (!is_null($events['events'])) {
 	   ];
 	}
 	// "Port-Stock" command
-	elseif ($prt_stk[0] == "PORT" and $prt_stk[1] <> "") {
+	elseif ($prt_stk[0] == "PORT" and $prt_stk[1] != "") {
 	   /*if ($prt_stk[1] == "PTT") 
 	   	{ 
 		   $prt_vol = 2000;
@@ -103,14 +103,14 @@ if (!is_null($events['events'])) {
 	      $dir = "▬";
 	   }*/
 		
-	   $amount = $prt_cost*$prt_vol;
+	   $amount = ($prt_cost*$prt_vol);
 	   $gl = ($amount)-($prt_vol*$stocks[$key][1]);
-	   $pgl = $gl/($amount)*100;
+	   $pgl = $gl/$amount*100;
 	   	
 	   $messages = [
 	      'type' => 'text',
-	      'text' => $stocks[$key][0]." @ ".number_format($stocks[$key][1],2).
-		   $dir" ".number_format($gl,2)." ".number_format($pgl,2)."%\n\n".
+	      'text' => $stocks[$key][0]." ".$dir." ".number_format($stocks[$key][1],2).
+		   number_format($gl,2)." ".number_format($pgl,2)."%\n\n".
 		   "ราคาซื้อ : ".number_format($prt_cost,2)."\n".
 		   "จำนวน   : ".number_format($prt_vol,2)."\n".
 		   "รวม	    : ".number_format($amount,2)."\n".
