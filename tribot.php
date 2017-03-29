@@ -48,6 +48,14 @@ if (!is_null($events['events'])) {
 	$stk_list = explode(",",$text);
 	$cmd = count($stk_list);
 	
+	// "Port" command
+	if ($text == "port") {
+	   $messages = [
+	      'type' => 'image',
+	      'originalContentUrl' => 'https://img.in.th/images/1caa7923979ef1c4684d8fc88526e943.png',
+	      'previewImageUrl' => 'https://img.in.th/images/157cfb79730a265550d20a7a87652d4e.png'
+	   ];
+	}
 	// "SET" command
 	if ($text == "SET") {
 	   $msg = 2;
@@ -110,14 +118,6 @@ if (!is_null($events['events'])) {
 	   $messages = [
 	   'type' => 'text',
 	   'text' => $txt_cmd."\n🕙  [".date("d/m/Y h:m")."]"
-	   ];
-	}
-	// "Port" command
-	if ($text == "port") {
-	   $messages = [
-	      'type' => 'image',
-	      'originalContentUrl' => 'https://img.in.th/images/1caa7923979ef1c4684d8fc88526e943.png',
-	      'previewImageUrl' => 'https://img.in.th/images/157cfb79730a265550d20a7a87652d4e.png'
 	   ];
 	}
       } catch (Exception $e) {
