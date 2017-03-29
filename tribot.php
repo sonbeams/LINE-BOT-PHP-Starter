@@ -82,6 +82,14 @@ if (!is_null($events['events'])) {
 	      'previewImageUrl' => 'https://img.in.th/images/157cfb79730a265550d20a7a87652d4e.png'
 	   ];
 	}
+	// "Port-Type" command
+	elseif ($text == "PORT 0") {
+	   $messages = [
+	      'type' => 'image',
+	      'originalContentUrl' => 'https://img.in.th/images/625ad187dca740ce48ad4688a97d6fef.png',
+	      'previewImageUrl' => 'https://img.in.th/images/a49ec61c791a47cfd5bdec83c3ec49e5.png'
+	   ];
+	}      
 	// One Stock command
 	elseif ($cmd == 1) {
 	   $messages = [
