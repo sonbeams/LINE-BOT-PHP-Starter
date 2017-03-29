@@ -47,7 +47,8 @@ if (!is_null($events['events'])) {
 	      
 	$stk_list = explode(",",$text);
 	$cmd = count($stk_list);
-	
+	$msg = 1;
+	      
 	// "SET" command
 	if ($text == "SET") {
 	   $msg = 2;
@@ -83,7 +84,6 @@ if (!is_null($events['events'])) {
 	}
 	// One Stock command
 	elseif ($cmd == 1) {
-	   $msg = 1;
 	   $messages = [
              'type' => 'text',
              'text' => $stocks[$key][0]." ".$dir."\n\n".
@@ -99,7 +99,6 @@ if (!is_null($events['events'])) {
 	}
 	// Multi stocks command
 	else {
-	   $msg = 1;
 	   $txt_cmd = "";
 	   foreach ($stk_list as $list) {
 		   $key = searchForId($list, $stocks);
