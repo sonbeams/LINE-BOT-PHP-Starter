@@ -24,7 +24,7 @@ if (!is_null($events['events'])) {
 	 $text = $event['message']['text'];
 
 	 $replyToken = $event['replyToken'];
-      
+     
          $stocks = array(
 	      array("PTT", 404, 0.00, 0.00, 2336, 5782, 404.04, 406.00, 402.00),
 	      array("GL", 25.75, 1.55, 6.40, 2219, 88498, 25.07, 25.75, 24.50),
@@ -48,6 +48,7 @@ if (!is_null($events['events'])) {
 	$stk_list = explode(",",$text);
 	$cmd = count($stk_list);
 	
+	// "SET" command
 	if ($text == "SET") {
 	   $msg = 2;
 	   $messages = [
@@ -72,6 +73,7 @@ if (!is_null($events['events'])) {
 		       "การเปลี่ยนแปลงในรอบ 1 ปี      +1.67%\n"
 	   ];
 	}
+	// One Stock command
 	elseif ($cmd == 1) {
 	   $msg = 1;
 	   $messages = [
@@ -86,7 +88,9 @@ if (!is_null($events['events'])) {
 		    "Low : ".number_format($stocks[$key][8],2)."\n\n".
 		    "🕙  [".date("d/m/Y h:m")."]"
            ];
-	} else {
+	}
+	// Multi stocks command
+	else {
 	   $msg = 1;
 	   $txt_cmd = "";
 	   foreach ($stk_list as $list) {
@@ -108,10 +112,14 @@ if (!is_null($events['events'])) {
 	   'text' => $txt_cmd."\n🕙  [".date("d/m/Y h:m")."]"
 	   ];
 	}
-      
-     
-	      
-       
+	// "Port" command
+	if ($text == "port") {
+	   $messages = [
+	      'type' => 'image',
+	      'originalContentUrl' => 'https://img.in.th/images/1caa7923979ef1c4684d8fc88526e943.png',
+	      'previewImageUrl' => 'https://img.in.th/images/157cfb79730a265550d20a7a87652d4e.png'
+	   ];
+	}
       } catch (Exception $e) {
 	$msg = 1;
         $messages = [
@@ -131,7 +139,7 @@ if (!is_null($events['events'])) {
       elseif ($msg == 2) {
 	 $data = [
 	    'replyToken' => $replyToken,
-	    'messages' => [$messages,$messages2],
+	    'messages' => [$messages, $messages2],
         ];
       }
       
