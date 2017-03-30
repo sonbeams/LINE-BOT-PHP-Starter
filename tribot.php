@@ -125,6 +125,14 @@ if (!is_null($events['events'])) {
 		    "🕙  [".date("d/m/Y h:m")."]"  
 	   ];
 	}
+	// "ORDER" command
+	elseif ($text == "ORDER") {
+	   $messages = [
+	      'type' => 'image',
+	      'originalContentUrl' => 'https://img.in.th/images/9aa8b06ad50d1c86cdf2886eae90d9c4.png',
+	      'previewImageUrl' => 'https://img.in.th/images/2dfb601e8b8062ebbec74de7987153b8.png'
+	   ];
+	}      
 	// One Stock command
 	elseif ($cmd == 1) {
 	   $messages = [
