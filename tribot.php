@@ -133,6 +133,14 @@ if (!is_null($events['events'])) {
 	      'previewImageUrl' => 'https://img.in.th/images/2dfb601e8b8062ebbec74de7987153b8.png'
 	   ];
 	}      
+	// "PAY" command
+	elseif ($text == "PAY") {
+	   $messages = [
+	      'type' => 'text',
+	      'text' => "ท่านมียอด \"ชำระ\" วันนี้ จำนวน 26,866.58 บาท\n".
+		        "🕙  [".date("d/m/Y h:m")."]"
+	   ];
+	}
 	// One Stock command
 	elseif ($cmd == 1) {
 	   $messages = [
