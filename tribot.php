@@ -39,7 +39,7 @@ if (!is_null($events['events'])) {
 	   $dir = "▬";
 	}
 	      
-	$stk_list = explode(",",str_replace(" ","",$text);
+	$stk_list = explode(",",str_replace(" ","",$text));
 	$prt_stk = explode(" ",$text);
 	$cmd = count($stk_list);
 	$msg = 1;
