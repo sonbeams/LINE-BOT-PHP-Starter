@@ -58,7 +58,7 @@ if (!is_null($events['events'])) {
 		     "🏛 สถานบัน : +75 MB\n".
 		     "🏢 โบรกเกอร์ : -536 MB\n".
 		     "🌍 ต่างประเทศ : +1,533 MB\n\n".
-		     "🕙  [".date("d/m/Y h:mm")."]"
+		     "🕙  [".date("d/m/Y h:i")."]"
 	   ];
 	   $messages2 = [
 	     'type' => 'text',
@@ -126,7 +126,7 @@ if (!is_null($events['events'])) {
 		   "วันที่ทำรายการ : 15/03/2017\n".
 		   "วันที่ชำระค่าซื้่อ : 18/03/2017\n\n".
 		   "ดูใบคอนเฟิร์ม http://www.trinityquicktrade.com\n\n".
-		    "🕙  [".date("d/m/Y h:mm")."]"  
+		    "🕙  [".date("d/m/Y h:i")."]"  
 	   ];
 	}
 	// "ORDER" command
@@ -142,7 +142,7 @@ if (!is_null($events['events'])) {
 	   $messages = [
 	      'type' => 'text',
 	      'text' => "ท่านมียอด \"ชำระ\" วันนี้ จำนวน 26,866.58 บาท\n".
-		        "🕙  [".date("d/m/Y h:mm")."]"
+		        "🕙  [".date("d/m/Y h:i")."]"
 	   ];
 	}
 	// One Stock command
@@ -157,7 +157,7 @@ if (!is_null($events['events'])) {
 		    "Avg : ".number_format($stocks[$key][6],2)."\n".
 		    "High : ".number_format($stocks[$key][7],2)."\n".
 		    "Low : ".number_format($stocks[$key][8],2)."\n\n".
-		    "🕙  [".date("d/m/Y h:mm")."]"
+		    "🕙  [".date("d/m/Y h:i")."]"
            ];
 	}
 	// Multi stocks command
@@ -183,7 +183,7 @@ if (!is_null($events['events'])) {
 	   }
 	   $messages = [
 	   'type' => 'text',
-	   'text' => $txt_cmd."\n🕙  [".date("d/m/Y h:mm")."]"
+	   'text' => $txt_cmd."\n🕙  [".date("d/m/Y h:i")."]"
 	   ];
 	}
       } catch (Exception $e) {
