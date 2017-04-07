@@ -162,6 +162,7 @@ if (!is_null($events['events'])) {
 	   $cmdmatch = false;
 	   $txt_cmd = "";
 	   foreach ($stk_list as $list) {
+	      if (searchForId($list, $stocks)) {
 		   $key = searchForId($list, $stocks);
 		   if ($stocks[$key][2] > 0) {
 		      $dir = "△";
@@ -175,6 +176,7 @@ if (!is_null($events['events'])) {
 			   	  ", ".number_format($stocks[$key][2],2).
 			   	  ", ".number_format($stocks[$key][3],2)."%\n";
 		   $cmdmatch = true;
+	      }
 	   }
 	   $messages = [
 	   'type' => 'text',
