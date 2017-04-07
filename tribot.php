@@ -26,6 +26,7 @@ if (!is_null($events['events'])) {
 	 );
 	      
       $text = strtoupper($text);
+      $cmdmatch = true;
 	      
       try {
 	$key = searchForId($text, $stocks);
@@ -142,7 +143,7 @@ if (!is_null($events['events'])) {
 	   ];
 	}
 	// One Stock command
-	elseif ($cmd == 1) {
+	elseif (searchForId($prt_stk[1], $text)) {
 	   $messages = [
              'type' => 'text',
              'text' => $stocks[$key][0]." ".$dir."\n\n".
@@ -158,6 +159,7 @@ if (!is_null($events['events'])) {
 	}
 	// Multi stocks command
 	else {
+	   $cmdmatch = false;
 	   $txt_cmd = "";
 	   foreach ($stk_list as $list) {
 		   $key = searchForId($list, $stocks);
@@ -172,6 +174,7 @@ if (!is_null($events['events'])) {
 			   	  " : ".number_format($stocks[$key][1],2).
 			   	  ", ".number_format($stocks[$key][2],2).
 			   	  ", ".number_format($stocks[$key][3],2)."%\n";
+		   $cmdmatch = true;
 	   }
 	   $messages = [
 	   'type' => 'text',
@@ -201,17 +204,19 @@ if (!is_null($events['events'])) {
         ];
       }
       
-      $post = json_encode($data);
-      $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
-      $ch = curl_init($url);
-      curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-      curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-      curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-      curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-      $result = curl_exec($ch);
-      curl_close($ch);
-      echo $result . "\r\n";
+      if ($cmdmatch) {
+	 $post = json_encode($data);
+         $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+         $ch = curl_init($url);
+         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+         curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+         $result = curl_exec($ch);
+         curl_close($ch);
+         echo $result . "\r\n";
+      }
       }
    }
 }
