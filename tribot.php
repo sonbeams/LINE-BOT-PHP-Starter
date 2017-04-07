@@ -143,7 +143,7 @@ if (!is_null($events['events'])) {
 	   ];
 	}
 	// One Stock command
-	elseif (searchForId($prt_stk[1], $text)) {
+	elseif (searchForId($stocks[0], $text)) {
 	   $messages = [
              'type' => 'text',
              'text' => $stocks[$key][0]." ".$dir."\n\n".
