@@ -7,6 +7,8 @@ function searchForId($id, $array) {
    }
    return null;
 }
+
+date_default_timezone_set('Asia/Bangkok');
 $access_token = 'IIckEKH4AEo7xgc74LJmTYBxU39gbny9jEwIbmroCsSTMFmg8RpQ1QPgVIm7kqrR4yO/0g0l/JvCX30uMq+WdFhjDXNuvZfo96+IrLgSZxJ2m2spr+eTIVo17dniDcIknwVf5BvWSFAs0yV3MuGY/gdB04t89/1O/w1cDnyilFU=';
 $content = file_get_contents('php://input');
 $events = json_decode($content, true);
