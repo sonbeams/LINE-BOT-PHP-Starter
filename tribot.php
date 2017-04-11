@@ -146,14 +146,14 @@ array("WHA", 3.12,0,0,74852,23896528,3.13,3.16,3.1,0,3.1,3.12)
 	   $key = searchForId($prt_stk[1], $stocks);
 		
            if ($stocks[$key][1] > $prt_cost) {
-	      $dir = "△";
+	      $dir = "🔺";
 	   } elseif ($stocks[$key][1] < $prt_cost) {
 	      $dir = "🔻";
 	   } else {
 	      $dir = "▬";
 	   }
-	   if ($stocks[$key][8] != 0) {
-	      $xd = $stocks[$key][8];
+	   if ($stocks[$key][9] != 0) {
+	      $xd = $stocks[$key][9];
 	   } else {
 	      $xd = "";
 	   }
@@ -196,8 +196,8 @@ array("WHA", 3.12,0,0,74852,23896528,3.13,3.16,3.1,0,3.1,3.12)
 	}
 	// One Stock command
 	elseif (searchForId($text, $stocks)) {
-	   if ($stocks[$key][8] != 0) {
-	      $xd = $stocks[$key][8];
+	   if ($stocks[$key][9] != 0) {
+	      $xd = $stocks[$key][9];
 	   } else {
 	      $xd = "";
 	   }
