@@ -229,7 +229,7 @@ array("WHA", 3.12,0,0,74852,23896528,3.13,3.16,3.1,0,3.1,3.12)
 	      if (searchForId($list, $stocks)) {
 		   $key = searchForId($list, $stocks);
 		   if ($stocks[$key][2] > 0) {
-		      $dir = "△";
+		      $dir = "🔺";
 		   } elseif ($stocks[$key][2] < 0) {
 		      $dir = "🔻";
 		   } else {
