@@ -203,8 +203,8 @@ array("WHA", 3.12,0,0,74852,23896528,3.13,3.16,3.1,0,3.1,3.12)
 	   }
 	   $messages = [
              'type' => 'text',
-             'text' => $stocks[$key][0].$xd." ".$dir."\n\n".
-		    "Price : ".number_format($stocks[$key][1],2)."\n".
+             'text' => $stocks[$key][0].$xd."\n\n".
+		    "Price : ".number_format($stocks[$key][1],2)." ".$dir."\n".
 		    "Chg : ".number_format($stocks[$key][2],2)." , ".number_format($stocks[$key][3],2)."%\n".
 		    "Mkt Value: ".number_format($stocks[$key][4],0)." MB\n".
 		    "Mkt Vol : ".number_format($stocks[$key][5],0)."\n".
