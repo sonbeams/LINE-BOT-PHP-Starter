@@ -146,7 +146,7 @@ array("WHA", 3.12,0,0,74852,23896528,3.13,3.16,3.1,0,3.1,3.12)
 	   elseif($prt_stk[1] == "MINT") 
 	        { 
 		   $prt_vol = 5500;
-		   $prt_cost = 32.25;
+		   $prt_cost = 33.75;
 	   	}
 	   $key = searchForId($prt_stk[1], $stocks);
 		
@@ -169,7 +169,7 @@ array("WHA", 3.12,0,0,74852,23896528,3.13,3.16,3.1,0,3.1,3.12)
 	   	
 	   $messages = [
 	      'type' => 'text',
-	      'text' => $stocks[$key][0].$xd." ".number_format($stocks[$key][1],0)." ".
+	      'text' => $stocks[$key][0].$xd." ".number_format($stocks[$key][1],2)." ".
 		   $dir." ".number_format($gl,2)." ".number_format($pgl,2)."%\n\n".
 		   "ราคาซื้อ : ".number_format($prt_cost,2)."\n".
 		   "จำนวน   : ".number_format($prt_vol,2)."\n".
