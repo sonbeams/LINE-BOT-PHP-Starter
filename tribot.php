@@ -157,7 +157,7 @@ array("WHA", 3.12,0,0,74852,23896528,3.13,3.16,3.1,0,3.1,3.12)
 	   } else {
 	      $dir = "▬";
 	   }
-	   if ($stocks[$key][9] != 0) {
+	   if ($stocks[$key][9] == "XD") {
 	      $xd = " ".$stocks[$key][9];
 	   } else {
 	      $xd = "";
@@ -169,7 +169,7 @@ array("WHA", 3.12,0,0,74852,23896528,3.13,3.16,3.1,0,3.1,3.12)
 	   	
 	   $messages = [
 	      'type' => 'text',
-	      'text' => $stocks[$key][0].$xd." ".number_format($stocks[$key][1],2)." ".
+	      'text' => $stocks[$key][0]."".$xd." ".number_format($stocks[$key][1],2)." ".
 		   $dir." ".number_format($gl,2)." ".number_format($pgl,2)."%\n\n".
 		   "ราคาซื้อ : ".number_format($prt_cost,2)."\n".
 		   "จำนวน   : ".number_format($prt_vol,2)."\n".
@@ -201,14 +201,14 @@ array("WHA", 3.12,0,0,74852,23896528,3.13,3.16,3.1,0,3.1,3.12)
 	}
 	// One Stock command
 	elseif (searchForId($text, $stocks)) {
-	   if ($stocks[$key][9] != 0) {
+	   if ($stocks[$key][9] == "XD") {
 	      $xd = " ".$stocks[$key][9];
 	   } else {
 	      $xd = "";
 	   }
 	   $messages = [
              'type' => 'text',
-             'text' => $stocks[$key][0].$xd."\n\n".
+             'text' => $stocks[$key][0]."".$xd."\n\n".
 		    "Price : ".number_format($stocks[$key][1],2)." ".$dir."\n".
 		    "Chg : ".number_format($stocks[$key][2],2)." , ".number_format($stocks[$key][3],2)."%\n".
 		    "Mkt Value: ".number_format($stocks[$key][4],0)." MB\n".
