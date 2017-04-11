@@ -143,6 +143,11 @@ array("WHA", 3.12,0,0,74852,23896528,3.13,3.16,3.1,0,3.1,3.12)
 		   $prt_vol = 4000;
 		   $prt_cost = 32.25;
 	   	}
+	   elseif($prt_stk[1] == "MINT") 
+	        { 
+		   $prt_vol = 5500;
+		   $prt_cost = 32.25;
+	   	}
 	   $key = searchForId($prt_stk[1], $stocks);
 		
            if ($stocks[$key][1] > $prt_cost) {
