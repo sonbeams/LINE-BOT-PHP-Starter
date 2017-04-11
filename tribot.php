@@ -157,10 +157,10 @@ array("WHA", 3.12,0,0,74852,23896528,3.13,3.16,3.1,0,3.1,3.12)
 	   } else {
 	      $dir = "▬";
 	   }
-	   if ($stocks[$key][9] == "XD") {
-	      $xd = " ".$stocks[$key][9];
-	   } else {
+	   if ($stocks[$key][9] == "0") {
 	      $xd = "";
+	   } else {
+	      $xd = " <".$stocks[$key][9].">";
 	   }
 		
 	   $amount = ($prt_cost*$prt_vol);
@@ -201,10 +201,11 @@ array("WHA", 3.12,0,0,74852,23896528,3.13,3.16,3.1,0,3.1,3.12)
 	}
 	// One Stock command
 	elseif (searchForId($text, $stocks)) {
-	   if ($stocks[$key][9] == "XD") {
-	      $xd = " ".$stocks[$key][9];
-	   } else {
+	   $key = searchForId($text, $stocks);
+	   if ($stocks[$key][9] == "0") {
 	      $xd = "";
+	   } else {
+	      $xd = " <".$stocks[$key][9].">";
 	   }
 	   $messages = [
              'type' => 'text',
