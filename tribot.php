@@ -120,7 +120,9 @@ array("WHA", 3.12,0,0,74852,23896528,3.13,3.16,3.1,0,3.1,3.12)
 	elseif ($text == "ID") {
 	   $messages = [
 	      'type' => 'text',
-	      'text' => $events['events'][0]['source']['userId']
+	      'text' => "User ID : ".$events['events'][0]['source']['userId']."\n".
+		   	"Room ID : ".$events['events'][0]['source']['roomId']."\n".
+		   	"Group ID : ".$events['events'][0]['source']['groupId']
 	   ];
 	}
 	// "Port" command
