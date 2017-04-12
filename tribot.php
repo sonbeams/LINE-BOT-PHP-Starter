@@ -120,7 +120,7 @@ array("WHA", 3.12,0,0,74852,23896528,3.13,3.16,3.1,0,3.1,3.12)
 	elseif ($text == "ID") {
 	   $messages = [
 	      'type' => 'text',
-	      'text' => $events['userId']
+	      'text' => $events['events'][0]['source']['userId']
 	   ];
 	}
 	// "Port" command
