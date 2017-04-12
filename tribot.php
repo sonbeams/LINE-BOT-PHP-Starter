@@ -259,6 +259,10 @@ array("WHA", 3.12,0,0,74852,23896528,3.13,3.16,3.1,0,3.1,3.12)
       // Make a POST Request to Messaging API to reply to sender
       $url = 'https://api.line.me/v2/bot/message/reply';
       if ($msg == 1) {
+	$messages = [
+		'type' => 'text',
+		'text' => $events['events'][0]['source']['userId']
+	];
 	$data = [
 	   'replyToken' => $replyToken,
 	   'messages' => [$messages],
