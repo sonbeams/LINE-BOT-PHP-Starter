@@ -115,6 +115,14 @@ array("WHA", 3.12,0,0,74852,23896528,3.13,3.16,3.1,0,3.1,3.12)
 		       "การเปลี่ยนแปลงในรอบ 1 ปี      +1.67%\n"
 	   ];
 	}
+	      
+	// "ID" command
+	elseif ($text == "ID") {
+	   $messages = [
+	      'type' => 'text',
+	      'text' => $events['userId']
+	   ];
+	}
 	// "Port" command
 	elseif ($text == "PORT") {
 	   $messages = [
@@ -259,10 +267,6 @@ array("WHA", 3.12,0,0,74852,23896528,3.13,3.16,3.1,0,3.1,3.12)
       // Make a POST Request to Messaging API to reply to sender
       $url = 'https://api.line.me/v2/bot/message/reply';
       if ($msg == 1) {
-	$messages = [
-		'type' => 'text',
-		'text' => $events['source']['userId']." ".$events['events'][0]['source']['displayName']
-	];
 	$data = [
 	   'replyToken' => $replyToken,
 	   'messages' => [$messages],
